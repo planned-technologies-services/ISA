@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dataModel baseSchema="dbo" baseTable="isaPropertyMgmt" alias="isaPropertyMgmt" created="2017-06-27T16:11:03" modified="2017-06-27T16:11:07" x="20" y="20" xmlns="urn:schemas-codeontime-com:data-model">
+  <foreignKeys />
+  <columns>
+    <column name="isaPropertyMgmtID" fieldName="IsaPropertyMgmtID" label="isa Property Mgmt ID" />
+    <column name="PropertyMgntName" fieldName="PropertyMgntName" label="Property Mgnt Name" />
+  </columns>
+</dataModel>

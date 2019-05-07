@@ -1,0 +1,115 @@
+﻿{
+  "name": "Modern",
+  "color": "#38c",
+  "header": {
+    "background": "#FFFFFF",
+    "border": null,
+    "paddingTop": 0,
+    "icon": {
+      "default": "#38c",
+      "hover": "#222",
+      "active": "#000",
+      "selected": null,
+      "backgroundOpacity": null
+    },
+    "text": {
+      "default": null,
+      "hover": "#222",
+      "active": "#000",
+      "logo": null,
+      "hoverBackground": "rgba(0,0,0,0.05)",
+      "selectedBackground": "rgba(0,0,0,0.08)"
+    },
+    "split": {
+      "background": null,
+      "icon": { "default": null }
+    }
+  },
+  "panel": {
+    "icon": {
+      "default": "#38c",
+      "hover": null,
+      "selected": null
+    }
+  },
+  "form": {
+    "header": {
+      "background": "transparent",
+      "border": "transparent"
+    },
+    "tabColor": "#38c"
+  },
+  "buttons": {
+    "promo": {
+      "background": "#38c",
+      "icon": { "default": null }
+    },
+    "form": {
+      "header": {
+        "background": "transparent",
+        "border": "transparent"
+      },
+      "text": {
+        "default": "#38c",
+        "hover": "#38c",
+        "active": null
+      }
+    },
+    "menu": {
+      "border": null
+    },
+    "wizard": {
+      "text": {
+        "default": "#000"
+      }
+    }
+  },
+  "sidebar": {
+    "full": {
+      "background": "#fff",
+      "border": null,
+      "selectedColor": "#38c",
+      "icon": {
+        "default": "#38c",
+        "hover": "#3ad",
+        "active": null
+      },
+      "toolbar": {
+        "background": "#38c",
+        "border": "#38c",
+        "selectedColor": "#fff",
+        "icon": {
+          "default": "#fff",
+          "hover": "#fff",
+          "active": "#fff"
+        }
+      }
+    },
+    "mini": {
+      "background": "#38c",
+      "border": "#38c",
+      "selectedColor": "#fff",
+      "icon": {
+        "default": "#fff",
+        "hover": "#e5e5e5",
+        "active": "#ccc"
+      },
+      "toolbar": {
+        "background": "#38c",
+        "border": "#38c",
+        "selectedColor": "#fff",
+        "icon": {
+          "default": "#fff",
+          "hover": "#fff",
+          "active": null
+        }
+      }
+    }
+  },
+  "actionBar": {
+    "background": "#fff"
+  },
+  "system": {
+    "selectBar": "#777"
+  }
+}

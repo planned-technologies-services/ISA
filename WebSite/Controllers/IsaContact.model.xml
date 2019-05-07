@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dataModel baseSchema="dbo" baseTable="isaContact" alias="isaContact" created="2017-06-27T16:13:03" modified="2017-06-27T16:13:31" x="20" y="20" xmlns="urn:schemas-codeontime-com:data-model">
+  <foreignKeys>
+    <foreignKey id="isa" parentTableSchema="dbo" parentTableName="isa" x="271" y="20">
+      <foreignKeyColumn columnName="isaID" parentColumnName="isaID" />
+    </foreignKey>
+    <foreignKey id="isaisaCompetitor" parentTableSchema="dbo" parentTableName="isaCompetitorMaster" baseForeignKey="isa" x="563" y="20">
+      <foreignKeyColumn columnName="isaCompetitorID" parentColumnName="isaCompetitorMasterID" />
+    </foreignKey>
+    <foreignKey id="isaisaSite" parentTableSchema="dbo" parentTableName="isaSite" baseForeignKey="isa" x="563" y="184">
+      <foreignKeyColumn columnName="isaSiteID" parentColumnName="isaSiteID" />
+    </foreignKey>
+    <foreignKey id="isaisaSiteisaPropertyMgmt" parentTableSchema="dbo" parentTableName="isaPropertyMgmt" baseForeignKey="isaisaSite" x="899" y="20">
+      <foreignKeyColumn columnName="isaPropertyMgmtID" parentColumnName="isaPropertyMgmtID" />
+    </foreignKey>
+    <foreignKey id="TheisaContact" parentTableSchema="dbo" parentTableName="isaContactMaster" x="271" y="227">
+      <foreignKeyColumn columnName="isaContactID" parentColumnName="isaContactID" />
+    </foreignKey>
+    <foreignKey id="TheisaContactType" parentTableSchema="dbo" parentTableName="isaContactType" baseForeignKey="TheisaContact" x="1217" y="20">
+      <foreignKeyColumn columnName="ContactTypeID" parentColumnName="isaContactTypeID" />
+    </foreignKey>
+  </foreignKeys>
+  <columns>
+    <column name="isaID" fieldName="IsaID" label="isa ID" aliasColumnName="CompanyCode" aliasForeignKey="isa" />
+    <column name="CompanyCode" fieldName="IsaCompanyCode" label="isa Company Code" foreignKey="isa" />
+    <column name="CompetitorName" fieldName="IsaisaCompetitorName" label="isaisa Competitor Name" foreignKey="isaisaCompetitor" />
+    <column name="SiteName" fieldName="IsaisaSiteName" label="isaisa Site Name" foreignKey="isaisaSite" />
+    <column name="PropertyMgntName" fieldName="IsaisaSiteisaPropertyMgmtPropertyMgntName" label="isaisa Siteisa Property Mgmt Property Mgnt Name" foreignKey="isaisaSiteisaPropertyMgmt" />
+    <column name="isaContactID" fieldName="IsaContactID" label="isa Contact ID" aliasColumnName="FirstName" aliasForeignKey="TheisaContact" />
+    <column name="FirstName" fieldName="TheisaContactFirstName" label="Theisa Contact First Name" foreignKey="TheisaContact" />
+    <column name="LastName" fieldName="TheisaContactLastName" label="Theisa Contact Last Name" foreignKey="TheisaContact" />
+    <column name="ContactDescription" fieldName="TheisaContactTypeContactDescription" label="Theisa Contact Type Contact Description" foreignKey="TheisaContactType" />
+  </columns>
+</dataModel>

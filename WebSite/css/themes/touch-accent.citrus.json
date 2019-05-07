@@ -1,0 +1,106 @@
+﻿{
+  "name": "Citrus",
+  "color": "#FFA500",
+  "header": {
+    "background": "orange",
+    "border": "#FFA500",
+    "paddingTop": 0,
+    "icon": {
+      "default": "#000",
+      "hover": null,
+      "selected": null,
+      "backgroundOpacity": null
+    },
+    "text": {
+      "default": "#000",
+      "hover": null,
+      "logo": null,
+      "hoverBackground": "rgba(0,0,0,0.05)",
+      "selectedBackground": "rgba(0,0,0,0.08)"
+    },
+    "split": {
+      "background": null,
+      "icon": { "default": null }
+    }
+  },
+  "panel": {
+    "icon": {
+      "default": "#0a6332",
+      "hover": "#003D00",
+      "selected": null
+    }
+  },
+  "form": {
+    "header": {
+      "background": "transparent",
+      "border": "transparent"
+    },
+    "tabColor": "#0a6332"
+  },
+  "buttons": {
+    "promo": {
+      "background": "#FFA500",
+      "icon": {
+        "default": "#000"
+      },
+      "menu": {
+        "icon": {
+          "default": null,
+          "hover": null
+        }
+      }
+    }
+  },
+  "sidebar": {
+    "full": {
+      "background": "#0a6332",
+      "border": "#0a6332",
+      "selectedColor": "#fff",
+      "text": {
+        "default": "#eee",
+        "hover": "#fff",
+        "active": "#ddd",
+        "static": "#8BB19C"
+      },
+      "icon": {
+        "default": "#fff",
+        "hover": "#eee",
+        "active": "#ddd"
+      },
+      "toolbar": {
+        "background": "#0a6332",
+        "border": "#0a6332",
+        "selectedColor": "#fff",
+        "icon": {
+          "default": "#fff",
+          "hover": "#ddd",
+          "active": "#eee"
+        }
+      }
+    },
+    "mini": {
+      "background": "#0a6332",
+      "border": "#0a6332",
+      "selectedColor": "#fff",
+      "icon": {
+        "default": "#fff",
+        "hover": "#eee",
+        "active": "#ddd"
+      },
+      "toolbar": {
+        "background": "#0a6332",
+        "border": "#0a6332",
+        "selectedColor": "#fff",
+        "icon": {
+          "default": "#fff",
+          "hover": "#ddd",
+          "active": "#eee"
+        }
+      }
+    }
+  }
+  //,"system": {
+  //  "selected": null,
+  //  "active": null
+  //}
+}

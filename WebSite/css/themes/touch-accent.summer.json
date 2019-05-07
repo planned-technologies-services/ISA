@@ -1,0 +1,78 @@
+﻿{
+  "name": "Summer",
+  "color": "#5C995C",
+  "header": {
+    "background": "#5C995C",
+    "border": "#5C995C",
+    "paddingTop": 0,
+    "icon": {
+      "default": "#eee",
+      "hover": "#fff",
+      "selected": null,
+      "backgroundOpacity": "0.13"
+    },
+    "text": {
+      "default": "#f5f5f5",
+      "hover": "#fff",
+      "logo": "#fff",
+      "hoverBackground": "rgba(0,0,0,0.1)",
+      "selectedBackground": "rgba(0,0,0,0.15)"
+    },
+    "split": {
+      "background": null,
+      "icon": { "default": null }
+    }
+  },
+  "panel": {
+    "icon": {
+      "default": "#5C995C",
+      "hover": "#155E08",
+      "selected": null
+    }
+  },
+  "form": {
+    "header": {
+      "background": "transparent", "border": "transparent"
+    }
+  },
+  "buttons": {
+    "promo": {
+      "background": "#5C995C",
+      "icon": { "default": null }
+    }
+  },
+  "sidebar": {
+    "full": {
+      "background": null,
+      "border": null,
+      "icon": { "default": null },
+      "toolbar": {
+        "background": null,
+        "icon": {
+          "default": null,
+          "hover": null,
+          "active": null
+        },
+        "border": null
+      }
+    },
+    "mini": {
+      "background": null,
+      "border": null,
+      "icon": { "default": null },
+      "toolbar": {
+        "background": null,
+        "icon": {
+          "default": null,
+          "hover": null,
+          "active": null
+        },
+        "border": null
+      }
+    }
+  }
+  //,"system": {
+  //  "selected": null,
+  //  "active": null
+  //}
+}

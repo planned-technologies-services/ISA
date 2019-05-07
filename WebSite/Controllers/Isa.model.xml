@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dataModel baseSchema="dbo" baseTable="isa" alias="isa" created="2017-06-27T16:10:14" modified="2017-06-28T09:40:29" x="20" y="20" xmlns="urn:schemas-codeontime-com:data-model">
+  <foreignKeys>
+    <foreignKey id="isaSite" parentTableSchema="dbo" parentTableName="isaSite" x="324" y="20">
+      <foreignKeyColumn columnName="isaSiteID" parentColumnName="isaSiteID" />
+    </foreignKey>
+    <foreignKey id="isaSiteisaPropertyMgmt" parentTableSchema="dbo" parentTableName="isaPropertyMgmt" baseForeignKey="isaSite" x="660" y="20">
+      <foreignKeyColumn columnName="isaPropertyMgmtID" parentColumnName="isaPropertyMgmtID" />
+    </foreignKey>
+    <foreignKey id="isaCompetitor" parentTableSchema="dbo" parentTableName="isaCompetitorMaster" x="324" y="204">
+      <foreignKeyColumn columnName="isaCompetitorID" parentColumnName="isaCompetitorMasterID" />
+    </foreignKey>
+  </foreignKeys>
+  <columns>
+    <column name="isaID" fieldName="IsaID" label="isa ID" />
+    <column name="CompanyCode" fieldName="CompanyCode" label="Company Code" />
+    <column name="isaSiteID" fieldName="IsaSiteID" label="isa Site ID" aliasColumnName="SiteName" aliasForeignKey="isaSite" />
+    <column name="SiteName" fieldName="IsaSiteName" label="isa Site Name" foreignKey="isaSite" />
+    <column name="PropertyMgntName" fieldName="IsaSiteisaPropertyMgmtPropertyMgntName" label="isa Siteisa Property Mgmt Property Mgnt Name" foreignKey="isaSiteisaPropertyMgmt" />
+    <column name="reqestedDate" fieldName="ReqestedDate" label="reqested Date" format="g" />
+    <column name="DueDate" fieldName="DueDate" label="Due Date" format="g" />
+    <column name="CompellingEvent" fieldName="CompellingEvent" label="Compelling Event" />
+    <column name="isaCompetitorID" fieldName="IsaCompetitorID" label="isa Competitor ID" aliasColumnName="CompetitorName" aliasForeignKey="isaCompetitor" />
+    <column name="CompetitorName" fieldName="IsaCompetitorName" label="isa Competitor Name" foreignKey="isaCompetitor" />
+    <column name="ContractTerm" fieldName="ContractTerm" label="Contract Term" />
+    <column name="SalesPerson" fieldName="SalesPerson" label="Sales Person" />
+  </columns>
+</dataModel>

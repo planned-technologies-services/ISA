@@ -1,0 +1,78 @@
+﻿{
+  "name": "Lichen",
+  "color": "#849585",
+  "header": {
+    "background": "#849585",
+    "border": "#849585",
+    "paddingTop": 0,
+    "icon": {
+      "default": "#eee",
+      "hover": "#fff",
+      "selected": null,
+      "backgroundOpacity": ".15"
+    },
+    "text": {
+      "default": "#f5f5f5",
+      "hover": "#fff",
+      "logo": "#fff",
+      "hoverBackground": "rgba(0,0,0,0.05)",
+      "selectedBackground": "rgba(0,0,0,0.1)"
+    },
+    "split": {
+      "background": null,
+      "icon": { "default": null }
+    }
+  },
+  "form": {
+    "header": {
+      "background": "transparent", "border": "transparent"
+    }
+  },
+  "panel": {
+    "icon": {
+      "default": "#849585",
+      "hover": "#687869",
+      "selected": null
+    }
+  },
+  "buttons": {
+    "promo": {
+      "background": "#849585",
+      "icon": { "default": null }
+    }
+  },
+  "sidebar": {
+    "full": {
+      "background": null,
+      "border": null,
+      "icon": {
+        "default": null
+      },
+      "toolbar": {
+        "background": null,
+        "icon": {
+          "default": null
+        },
+        "border": null
+      }
+    },
+    "mini": {
+      "background": null,
+      "border": null,
+      "icon": { "default": null },
+      "toolbar": {
+        "background": null,
+        "icon": {
+          "default": null,
+          "hover": null,
+          "active": null
+        },
+        "border": null
+      }
+    }
+  }
+  //,"system": {
+  //  "selected": null,
+  //  "active": null
+  //}
+}

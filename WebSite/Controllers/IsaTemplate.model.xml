@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dataModel baseSchema="dbo" baseTable="isaTemplate" alias="isaTemplate" created="2017-06-28T12:00:15" modified="2017-06-28T12:22:09" x="20" y="20" xmlns="urn:schemas-codeontime-com:data-model">
+  <foreignKeys>
+    <foreignKey id="isaItemMaster" parentTableSchema="dbo" parentTableName="isaItemMaster" x="317" y="20">
+      <foreignKeyColumn columnName="isaItemMasterID" parentColumnName="isaItemMasterID" />
+    </foreignKey>
+    <foreignKey id="isaItemMasterisaCategoryMaster" parentTableSchema="dbo" parentTableName="isaCategoryMaster" baseForeignKey="isaItemMaster" x="639" y="20">
+      <foreignKeyColumn columnName="isaCategoryMasterID" parentColumnName="isaCategoryMasterID" />
+    </foreignKey>
+  </foreignKeys>
+  <columns>
+    <column name="isaTemplateID" fieldName="IsaTemplateID" label="isa Template ID" />
+    <column name="isaItemMasterID" fieldName="IsaItemMasterID" label="isa Item Master ID" aliasColumnName="ItemDescription" aliasForeignKey="isaItemMaster" />
+    <column name="ItemDescription" fieldName="IsaItemMasterItemDescription" label="isa Item Master Item Description" foreignKey="isaItemMaster" sortType="Ascending" sortOrder="1" />
+    <column name="CategoryDescription" fieldName="IsaItemMasterisaCategoryMasterCategoryDescription" label="isa Item Masterisa Category Master Category Description" foreignKey="isaItemMasterisaCategoryMaster" />
+    <column name="CompanCode" fieldName="CompanCode" label="Compan Code" />
+  </columns>
+</dataModel>

@@ -1,0 +1,108 @@
+﻿{
+  "name": "Plastic",
+  "color": "#f0712b",
+  "header": {
+    "background": "#f0712b",
+    "border": "#f0712b",
+    "divider": "#006dbf",
+    "paddingTop": 0,
+    "icon": {
+      "default": "#000",
+      "hover": "#333",
+      "selected": null,
+      "backgroundOpacity": null
+    },
+    "text": {
+      "default": "#412c21",
+      "hover": "#333",
+      "logo": null,
+      "hoverBackground": "rgba(255,255,255,.1)",
+      "selectedBackground": "rgba(255,255,255,.2)"
+    },
+    "split": {
+      "background": null,
+      "icon": { "default": null }
+    }
+  },
+  "panel": {
+    "icon": {
+      "default": "#f0712b",
+      "hover": "#CC6900",
+      "selected": null
+    }
+  },
+  "form": {
+    "header": {
+      "background": "transparent",
+      "border": "transparent"
+    },
+    "tabColor": "#006dbf"
+  },
+  "buttons": {
+    "promo": {
+      "background": "#f0712b",
+      "icon": {
+        "default": "#000"
+      }
+    },
+    "menu": {
+      "background": "#006dbf",
+      "border": "#006dbf"
+    }
+  },
+  "actionBar": {
+    "background": "#fff"
+  },
+  "sidebar": {
+    "full": {
+      "background": "#006dbf",
+      "border": "#006dbf",
+      "selectedColor": "#fff",
+      "text": {
+        "default": "#fff",
+        "hover": "#ddd",
+        "active": "#eee",
+        "static": "#A2C3CD"
+      },
+      "icon": {
+        "default": "#fff",
+        "hover": "#ccc",
+        "active": "#eee"
+      },
+      "toolbar": {
+        "background": null,
+        "border": null,
+        "icon": {
+          "default": null,
+          "hover": null,
+          "active": null
+        }
+      }
+    },
+    "mini": {
+      "background": "#006dbf",
+      "border": "#006dbf",
+      "selectedColor": "#fff",
+      "icon": {
+        "default": "#fff",
+        "hover": "#ccc",
+        "active": null
+      },
+      "toolbar": {
+        "background": null,
+        "border": null,
+        "icon": {
+          "default": null,
+          "hover": null,
+          "active": null
+        }
+      }
+    }
+  },
+  "system": {
+    "selectBar": "#f0712b",
+    "selected": null,
+    "active": null,
+    "backTextMaxWidth": "170px"
+  }
+}

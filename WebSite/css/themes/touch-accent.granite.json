@@ -1,0 +1,88 @@
+﻿{
+  "name": "Granite",
+  "color": "#b1b3b2",
+  "header": {
+    "background": "#b1b3b2",
+    "border": "#aaa",
+    "paddingTop": 0,
+    "icon": {
+      "default": "#111",
+      "hover": "#000",
+      "active": "#000",
+      "selected": null,
+      "backgroundOpacity": null
+    },
+    "text": {
+      "default": "#111",
+      "hover": "#000",
+      "logo": "#000",
+      "hoverBackground": "rgba(0,0,0,0.05)",
+      "selectedBackground": "rgba(0,0,0,0.08)"
+    },
+    "split": {
+      "background": null,
+      "icon": { "default": null }
+    }
+  },
+  "panel": {
+    "icon": {
+      "default": "#5B5D5C",
+      "hover": "#6F7170",
+      "selected": null
+    }
+  },
+  "form": {
+    "header": {
+      "background": "transparent",
+      "border": "transparent"
+    },
+    "tabColor": "#777"
+  },
+  "buttons": {
+    "promo": {
+      "background": "#b1b3b2",
+      "icon": {
+        "default": "#111"
+      }
+    },
+    "tabbar": {
+      "icon": { "default": "#333" }
+    }
+  },
+  "sidebar": {
+    "full": {
+      "background": null,
+      "border": null,
+      "icon": { "default": null },
+      "selectedColor": "#777",
+      "toolbar": {
+        "background": null,
+        "icon": {
+          "default": null,
+          "hover": null,
+          "active": null
+        },
+        "border": null
+      }
+    },
+    "mini": {
+      "background": null,
+      "border": null,
+      "icon": { "default": null },
+      "toolbar": {
+        "background": null,
+        "icon": {
+          "default": null,
+          "hover": null,
+          "active": null
+        },
+        "border": null
+      }
+    }
+  },
+  "system": {
+    "selected": null,
+    "active": null,
+    "selectBar": "#777"
+  }
+}

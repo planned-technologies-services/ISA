@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dataModel baseSchema="dbo" baseTable="isaSite" alias="isaSite" created="2017-06-27T16:10:46" modified="2017-06-27T16:10:53" x="20" y="20" xmlns="urn:schemas-codeontime-com:data-model">
+  <foreignKeys>
+    <foreignKey id="isaPropertyMgmt" parentTableSchema="dbo" parentTableName="isaPropertyMgmt" x="333" y="20">
+      <foreignKeyColumn columnName="isaPropertyMgmtID" parentColumnName="isaPropertyMgmtID" />
+    </foreignKey>
+  </foreignKeys>
+  <columns>
+    <column name="isaSiteID" fieldName="IsaSiteID" label="isa Site ID" />
+    <column name="SiteName" fieldName="SiteName" label="Site Name" />
+    <column name="Address1" fieldName="Address1" label="Address1" />
+    <column name="Address2" fieldName="Address2" label="Address2" />
+    <column name="City" fieldName="City" label="City" />
+    <column name="State" fieldName="State" label="State" />
+    <column name="ZipCode" fieldName="ZipCode" label="Zip Code" />
+    <column name="PhoneMain" fieldName="PhoneMain" label="Phone Main" />
+    <column name="Website" fieldName="Website" label="Website" />
+    <column name="Email" fieldName="Email" label="Email" />
+    <column name="SiteType" fieldName="SiteType" label="Site Type" />
+    <column name="NoOfUnits" fieldName="NoOfUnits" label="No Of Units" />
+    <column name="NoOfFloors" fieldName="NoOfFloors" label="No Of Floors" />
+    <column name="NoOfEmployees" fieldName="NoOfEmployees" label="No Of Employees" />
+    <column name="isaPropertyMgmtID" fieldName="IsaPropertyMgmtID" label="isa Property Mgmt ID" aliasColumnName="PropertyMgntName" aliasForeignKey="isaPropertyMgmt" />
+    <column name="PropertyMgntName" fieldName="IsaPropertyMgmtPropertyMgntName" label="isa Property Mgmt Property Mgnt Name" foreignKey="isaPropertyMgmt" />
+    <column name="TrashDays" fieldName="TrashDays" label="Trash Days" />
+  </columns>
+</dataModel>

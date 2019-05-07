@@ -1,0 +1,86 @@
+﻿{
+  "name": "ModernRose",
+  "color": "#c10003",
+  "header": {
+    "background": "#c10003",
+    "border": "#c10003",
+    "paddingTop": 0,
+    "icon": {
+      "default": "#eee",
+      "hover": "#fff",
+      "selected": null,
+      "backgroundOpacity": "0.2"
+    },
+    "text": {
+      "default": "#f5f5f5",
+      "hover": "#fff",
+      "logo": "#fff",
+      "hoverBackground": "rgba(0,0,0,0.05)",
+      "selectedBackground": "rgba(0,0,0,0.1)"
+    },
+    "split": {
+      "background": null,
+      "icon": { "default": null }
+    }
+  },
+  "panel": {
+    "icon": {
+      "default": "#c10003",
+      "hover": "#7A0002",
+      "selected": null
+    }
+  },
+  "form": {
+    "header": {
+      "background": "transparent", "border": "transparent"
+    }
+  },
+  "buttons": {
+    "promo": {
+      "background": "#c10003",
+      "icon": { "default": null }
+    }
+  },
+  "sidebar": {
+    "full": {
+      "background": null,
+      "border": null,
+      "icon": {
+        "default": null,
+        "hover": null,
+        "active": null
+      },
+      "toolbar": {
+        "background": null,
+        "icon": {
+          "default": "#c10003",
+          "hover": "#7A0002",
+          "active": "#b30003"
+        },
+        "border": null
+      }
+    },
+    "mini": {
+      "background": null,
+      "border": null,
+      "icon": {
+        "default": null,
+        "hover": null,
+        "active": null
+      },
+      "toolbar": {
+        "background": null,
+        "icon": {
+          "default": "#c10003",
+          "hover": "#7A0002",
+          "active": null
+        },
+        "border": null
+      }
+    }
+  }
+  //,"system": {
+  //  "selected": null,
+  //  "active": null
+  //}
+}

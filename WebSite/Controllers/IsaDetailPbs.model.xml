@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dataModel baseSchema="dbo" baseTable="isaDetailPBS" alias="isaDetailPBS" created="2017-06-29T13:38:33" modified="2017-06-29T14:19:54" x="20" y="20" xmlns="urn:schemas-codeontime-com:data-model">
+  <foreignKeys>
+    <foreignKey id="isa" parentTableSchema="dbo" parentTableName="isa" x="327" y="20">
+      <foreignKeyColumn columnName="isaID" parentColumnName="isaID" />
+    </foreignKey>
+    <foreignKey id="isaisaSite" parentTableSchema="dbo" parentTableName="isaSite" baseForeignKey="isa" x="646" y="27">
+      <foreignKeyColumn columnName="isaSiteID" parentColumnName="isaSiteID" />
+    </foreignKey>
+    <foreignKey id="isaItemMaster" parentTableSchema="dbo" parentTableName="isaItemMaster" x="327" y="228">
+      <foreignKeyColumn columnName="isaItemMasterID" parentColumnName="isaItemMasterID" />
+    </foreignKey>
+    <foreignKey id="isaItemMasterisaCategoryMaster" parentTableSchema="dbo" parentTableName="isaCategoryMaster" baseForeignKey="isaItemMaster" x="941" y="219">
+      <foreignKeyColumn columnName="isaCategoryMasterID" parentColumnName="isaCategoryMasterID" />
+    </foreignKey>
+  </foreignKeys>
+  <columns>
+    <column name="isaID" fieldName="IsaID" label="isa ID" aliasColumnName="CompanyCode" aliasForeignKey="isa" />
+    <column name="CompanyCode" fieldName="IsaCompanyCode" label="isa Company Code" foreignKey="isa" />
+    <column name="SiteName" fieldName="IsaisaSiteName" label="isaisa Site Name" foreignKey="isaisaSite" />
+    <column name="isaItemMasterID" fieldName="IsaItemMasterID" label="isa Item Master ID" aliasColumnName="ItemDescription" aliasForeignKey="isaItemMaster" />
+    <column name="ItemDescription" fieldName="IsaItemMasterItemDescription" label="isa Item Master Item Description" foreignKey="isaItemMaster" />
+    <column name="CategoryDescription" fieldName="IsaItemMasterisaCategoryMasterCategoryDescription" label="isa Item Masterisa Category Master Category Description" foreignKey="isaItemMasterisaCategoryMaster" />
+    <column name="Comment" fieldName="Comment" label="Comment" />
+  </columns>
+</dataModel>

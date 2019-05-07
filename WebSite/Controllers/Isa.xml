@@ -1,0 +1,247 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dataController name="Isa" conflictDetection="overwriteChanges" label="Isa" xmlns="urn:schemas-codeontime-com:data-aquarium">
+  <commands>
+    <command id="command1" type="Text">
+      <text><![CDATA[
+select
+	"isa"."isaID" "IsaID"
+	,"isa"."CompanyCode" "CompanyCode"
+	,"isa"."isaSiteID" "IsaSiteID"
+	,"isaSite"."SiteName" "IsaSiteName"
+	,"isaSiteisaPropertyMgmt"."PropertyMgntName" "IsaSiteisaPropertyMgmtPropertyMgntName"
+	,"isa"."reqestedDate" "ReqestedDate"
+	,"isa"."DueDate" "DueDate"
+	,"isa"."CompellingEvent" "CompellingEvent"
+	,"isa"."isaCompetitorID" "IsaCompetitorID"
+	,"isaCompetitor"."CompetitorName" "IsaCompetitorName"
+	,"isa"."ContractTerm" "ContractTerm"
+	,"isa"."SalesPerson" "SalesPerson"
+from "dbo"."isa" "isa"
+	left join "dbo"."isaSite" "isaSite" on "isa"."isaSiteID" = "isaSite"."isaSiteID"
+	left join "dbo"."isaPropertyMgmt" "isaSiteisaPropertyMgmt" on "isaSite"."isaPropertyMgmtID" = "isaSiteisaPropertyMgmt"."isaPropertyMgmtID"
+	left join "dbo"."isaCompetitorMaster" "isaCompetitor" on "isa"."isaCompetitorID" = "isaCompetitor"."isaCompetitorMasterID"
+]]></text>
+    </command>
+    <command id="isaIDIdentityCommand" type="Text" event="Inserted">
+      <text><![CDATA[select @@identity]]></text>
+      <output>
+        <fieldOutput fieldName="isaID" />
+      </output>
+    </command>
+  </commands>
+  <fields>
+    <field name="IsaID" type="Int32" allowNulls="false" isPrimaryKey="true" label="isa ID" readOnly="true" />
+    <field name="CompanyCode" type="String" allowNulls="false" label="Company Code" length="3" showInSummary="true">
+      <items style="RadioButtonList">
+        <item value="PBS" text="PBS" />
+        <item value="PSS" text="PSS" />
+        <item value="PLS" text="PLS" />
+      </items>
+    </field>
+    <field name="IsaSiteID" type="Int32" label="isa Site ID" showInSummary="true">
+      <items style="Lookup" dataController="IsaSite" newDataView="createForm1" dataValueField="IsaSiteID" dataTextField="SiteName" copy="IsaSiteisaPropertyMgmtPropertyMgntName=IsaPropertyMgmtPropertyMgntName" />
+    </field>
+    <field name="IsaSiteName" type="String" readOnly="true" label="Site Name" length="50" />
+    <field name="IsaSiteisaPropertyMgmtPropertyMgntName" type="String" readOnly="true" label="Property Mgnt Name" length="50" />
+    <field name="ReqestedDate" type="DateTime" dataFormatString="g" label="Requested Date" showInSummary="true" />
+    <field name="DueDate" type="DateTime" dataFormatString="g" label="Due Date" showInSummary="true" />
+    <field name="CompellingEvent" type="String" label="Compelling Event" length="300" showInSummary="true" />
+    <field name="IsaCompetitorID" type="Int32" label="isa Competitor ID">
+      <items style="Lookup" dataController="IsaCompetitorMaster" newDataView="createForm1" dataValueField="IsaCompetitorMasterID" dataTextField="CompetitorName" />
+    </field>
+    <field name="IsaCompetitorName" type="String" readOnly="true" label="Competitor Name" length="50" />
+    <field name="ContractTerm" type="String" label="Contract Term" length="50" />
+    <field name="SalesPerson" type="String" label="Sales Person" length="50" />
+    <field name="IsaAttachment" type="DataView" label="Attachment">
+      <dataView controller="IsaAttachment" view="grid1" filterFields="IsaID" />
+    </field>
+    <field name="IsaContact" type="DataView" label="Isa Contact">
+      <dataView controller="IsaContact" view="grid1" filterFields="IsaID" />
+    </field>
+    <field name="IsaDetailPbs" type="DataView" label="PBS">
+      <dataView controller="IsaDetailPbs" view="grid1" filterFields="IsaID" />
+    </field>
+    <field name="IsaDetailPls" type="DataView" label="PLS">
+      <dataView controller="IsaDetailPls" view="grid1" filterFields="IsaID" />
+    </field>
+    <field name="IsaDetailPss" type="DataView" label="PSS">
+      <dataView controller="IsaDetailPss" view="grid1" filterFields="IsaID" />
+    </field>
+  </fields>
+  <views>
+    <view id="grid1" type="Grid" commandId="command1" label="All Companies">
+      <headerText>$DefaultGridViewDescription</headerText>
+      <dataFields>
+        <dataField fieldName="CompanyCode" columns="3" />
+        <dataField fieldName="IsaSiteID" aliasFieldName="IsaSiteName" />
+        <dataField fieldName="IsaSiteisaPropertyMgmtPropertyMgntName" columns="50" />
+        <dataField fieldName="ReqestedDate" columns="20" />
+        <dataField fieldName="DueDate" columns="20" />
+        <dataField fieldName="CompellingEvent" />
+        <dataField fieldName="IsaCompetitorID" aliasFieldName="IsaCompetitorName" />
+        <dataField fieldName="ContractTerm" columns="50" />
+        <dataField fieldName="SalesPerson" columns="50" />
+        <dataField fieldName="IsaAttachment" columns="15" />
+      </dataFields>
+    </view>
+    <view id="editForm1" type="Form" commandId="command1" label="Review Isa">
+      <headerText>$DefaultEditViewDescription</headerText>
+      <categories>
+        <category id="c1" headerText="Isa" flow="NewColumn">
+          <description><![CDATA[$DefaultEditDescription]]></description>
+          <dataFields>
+            <dataField fieldName="CompanyCode" columns="3" />
+            <dataField fieldName="IsaSiteID" aliasFieldName="IsaSiteName" />
+            <dataField fieldName="IsaSiteisaPropertyMgmtPropertyMgntName" columns="50" />
+            <dataField fieldName="ReqestedDate" columns="20" />
+            <dataField fieldName="DueDate" columns="20" />
+            <dataField fieldName="CompellingEvent" />
+            <dataField fieldName="IsaCompetitorID" aliasFieldName="IsaCompetitorName" />
+            <dataField fieldName="ContractTerm" columns="50" />
+            <dataField fieldName="SalesPerson" columns="50" />
+          </dataFields>
+        </category>
+        <category headerText="Details" id="c2" tab="PBS" flow="NewRow">
+          <dataFields>
+            <dataField fieldName="IsaDetailPbs" columns="15" />
+          </dataFields>
+        </category>
+        <category tab="PLS" id="c3">
+          <dataFields>
+            <dataField fieldName="IsaDetailPls" columns="15" />
+          </dataFields>
+        </category>
+        <category tab="PSS" id="c4">
+          <dataFields>
+            <dataField fieldName="IsaDetailPss" columns="15" />
+          </dataFields>
+        </category>
+        <category tab="Contacts" id="c5" flow="NewRow">
+          <dataFields>
+            <dataField fieldName="IsaContact" columns="15" />
+          </dataFields>
+        </category>
+        <category tab="Attachments" id="c6">
+          <dataFields>
+            <dataField fieldName="IsaAttachment" columns="15" />
+          </dataFields>
+        </category>
+      </categories>
+    </view>
+    <view id="createForm1" type="Form" commandId="command1" label="New ISA">
+      <headerText />
+      <categories>
+        <category id="c1" headerText="New Isa" flow="NewColumn">
+          <description><![CDATA[$DefaultNewDescription]]></description>
+          <dataFields>
+            <dataField fieldName="CompanyCode" columns="3" />
+            <dataField fieldName="IsaSiteID" aliasFieldName="IsaSiteName" />
+            <dataField fieldName="IsaSiteisaPropertyMgmtPropertyMgntName" columns="50" />
+            <dataField fieldName="ReqestedDate" columns="20" />
+            <dataField fieldName="DueDate" columns="20" />
+            <dataField fieldName="CompellingEvent" />
+            <dataField fieldName="IsaCompetitorID" aliasFieldName="IsaCompetitorName" />
+            <dataField fieldName="ContractTerm" columns="50" />
+            <dataField fieldName="SalesPerson" columns="50" />
+          </dataFields>
+        </category>
+        <category headerText="Details" id="c2" tab="PBS" flow="NewRow">
+          <dataFields>
+            <dataField fieldName="IsaDetailPbs" columns="15" />
+          </dataFields>
+        </category>
+        <category tab="PLS" id="c3">
+          <dataFields>
+            <dataField fieldName="IsaDetailPls" columns="15" />
+          </dataFields>
+        </category>
+        <category tab="PSS" id="c4">
+          <dataFields>
+            <dataField fieldName="IsaDetailPss" columns="15" />
+          </dataFields>
+        </category>
+        <category tab="Contacts" id="c5" flow="NewRow">
+          <dataFields>
+            <dataField fieldName="IsaContact" columns="15" />
+          </dataFields>
+        </category>
+        <category tab="Attachments" id="c6">
+          <dataFields>
+            <dataField fieldName="IsaAttachment" columns="15" />
+          </dataFields>
+        </category>
+      </categories>
+    </view>
+  </views>
+  <actions>
+    <actionGroup id="ag1" scope="Grid">
+      <action id="a1" commandName="Select" commandArgument="editForm1" />
+      <action id="a2" commandName="Edit" commandArgument="editForm1" />
+      <action id="a3" commandName="Delete" />
+      <action id="a6" />
+      <action id="a7" commandName="New" commandArgument="grid1" />
+      <action id="a8" commandName="Duplicate" commandArgument="createForm1" />
+    </actionGroup>
+    <actionGroup id="ag2" scope="Form">
+      <action id="a1" commandName="Edit" />
+      <action id="a2" commandName="Delete" />
+      <action id="a3" commandName="Cancel" />
+      <action id="a4" whenLastCommandName="Edit" commandName="Update" commandArgument="Save" />
+      <action id="a5" whenLastCommandName="Edit" commandName="Cancel" />
+      <action id="a6" whenLastCommandName="New" commandName="Insert" commandArgument="Save" />
+      <action id="a7" whenLastCommandName="New" commandName="Insert" commandArgument="SaveAndNew" />
+      <action id="a8" whenLastCommandName="New" commandName="Cancel" />
+      <action id="a9" whenLastCommandName="Duplicate" commandName="Insert" />
+      <action id="a10" whenLastCommandName="Duplicate" commandName="Cancel" />
+      <action id="a13" whenLastCommandName="Insert" whenLastCommandArgument="Save" whenView="createForm1" commandName="Select" commandArgument="editForm1" whenClientScript="this.hasDetails()" />
+      <action id="a14" whenLastCommandName="Insert" whenLastCommandArgument="SaveAndNew" commandName="New" commandArgument="createForm1" />
+    </actionGroup>
+    <actionGroup id="ag3" scope="ActionBar" headerText="New" flat="true">
+      <action id="a1" commandName="New" commandArgument="createForm1" cssClass="NewIcon" />
+    </actionGroup>
+    <actionGroup id="ag4" scope="ActionBar" headerText="Edit/Delete" flat="true">
+      <action id="a1" whenKeySelected="true" commandName="Edit" commandArgument="editForm1" cssClass="EditIcon" whenView="grid1" />
+      <action id="a2" whenKeySelected="true" commandName="Delete" cssClass="DeleteIcon" whenView="grid1" />
+    </actionGroup>
+    <actionGroup id="ag5" scope="ActionBar" headerText="Actions">
+      <action id="a1" commandName="ExportCsv" />
+      <action id="a2" />
+      <action id="a3" commandName="ExportRowset" />
+      <action id="a4" commandName="ExportRss" />
+      <action id="a5" />
+      <action id="a6" commandName="Import" commandArgument="createForm1" />
+      <action id="a7" commandName="DataSheet" />
+      <action id="a8" commandName="Grid" />
+    </actionGroup>
+    <actionGroup id="ag6" scope="ActionBar" headerText="Record">
+      <action id="a1" whenLastCommandName="Edit" commandName="Update" />
+      <action id="a2" whenLastCommandName="Edit" commandName="Cancel" />
+      <action id="a3" whenLastCommandName="New" commandName="Insert" />
+      <action id="a4" whenLastCommandName="New" commandName="Cancel" />
+    </actionGroup>
+    <actionGroup id="ag7" scope="ActionBar" headerText="Report">
+      <action id="a1" commandName="ReportAsPdf" />
+      <action id="a2" commandName="ReportAsImage" />
+      <action id="a3" commandName="ReportAsExcel" />
+      <action id="a4" commandName="ReportAsWord" />
+    </actionGroup>
+    <actionGroup id="ag8" scope="Row">
+      <action id="a4" whenLastCommandName="Edit" commandName="Update" />
+      <action id="a5" whenLastCommandName="Edit" commandName="Cancel" />
+      <action id="a6" whenLastCommandName="New" commandName="Insert" />
+      <action id="a7" whenLastCommandName="New" commandName="Cancel" />
+    </actionGroup>
+  </actions>
+  <businessRules>
+    <rule id="r100" commandName="Delete" type="Sql" phase="Before"><![CDATA[Delete FROM isaDetail
+where isaID = @isaID
+
+Delete FROM isaAttachment
+where isaID = @isaID
+
+Delete FROM isaContact
+where isaID = @isaID
+]]></rule>
+    <rule id="r101" commandName="Select" view="editForm1" type="Sql" phase="Execute"><![CDATA[set @Session_CompanyCode = @CompanyCode]]></rule>
+  </businessRules>
+</dataController>

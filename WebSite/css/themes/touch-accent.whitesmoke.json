@@ -1,0 +1,101 @@
+﻿{
+  "name": "WhiteSmoke",
+  "color": "#e6e6e6",
+  "header": {
+    "background": "#e6e6e6",
+    "border": null,
+    "paddingTop": null,
+    "icon": {
+      "default": null,
+      "hover": null,
+      "selected": null,
+      "backgroundOpacity": null
+    },
+    "text": {
+      "default": "#333",
+      "hover": null,
+      "logo": null,
+      "hoverBackground": "rgba(0,0,0,0.05)",
+      "selectedBackground": "rgba(0,0,0,0.1)"
+    },
+    "split": {
+      "background": null,
+      "icon": { "default": null }
+    }
+  },
+  "panel": {
+    "icon": {
+      "default": "#333",
+      "hover": null,
+      "selected": null
+    }
+  },
+  "form": {
+    "header": {
+      "background": "transparent",
+      "border": "transparent"
+    },
+    "tabColor": "#282d32"
+  },
+  "buttons": {
+    "promo": {
+      "background": null
+    },
+    "wizard": {
+      "border": "#000"
+    }
+  },
+  "sidebar": {
+    "full": {
+      "background": "#282d32",
+      "border": "#282d32",
+      "selectedColor": "#fff",
+      "hoverBackground": "rgba(255,255,255,0.05)",
+      "text": {
+        "default": "#fff",
+        "hover": "#eee",
+        "active": "#f5f5f5",
+        "static": "#aaa"
+      },
+      "icon": {
+        "default": "#fff",
+        "hover": "#e5e5e5",
+        "active": "#f5f5f5"
+      },
+      "toolbar": {
+        "background": "#282d32",
+        "border": "#282d32",
+        "selectedColor": "#fff",
+        "icon": {
+          "default": "#fff",
+          "hover": "#e5e5e5",
+          "active": "#f5f5f5"
+        }
+      }
+    },
+    "mini": {
+      "background": "#282d32",
+      "border": "#282d32",
+      "selectedColor": "#fff",
+      "icon": {
+        "default": "#fff",
+        "hover": "#e5e5e5",
+        "active": null
+      },
+      "toolbar": {
+        "background": "#282d32",
+        "border": "#282d32",
+        "selectedColor": "#fff",
+        "icon": {
+          "default": "#fff",
+          "hover": "#fff",
+          "active": null
+        }
+      }
+    }
+  },
+  "system": {
+    "hoverBackground": "rgba(255,255,255,.1)",
+    "selectBar":  "#777"
+  }
+}

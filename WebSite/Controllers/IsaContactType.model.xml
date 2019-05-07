@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dataModel baseSchema="dbo" baseTable="isaContactType" alias="isaContactType" created="2017-06-27T16:13:48" modified="2017-06-27T16:13:52" x="20" y="20" xmlns="urn:schemas-codeontime-com:data-model">
+  <foreignKeys />
+  <columns>
+    <column name="isaContactTypeID" fieldName="IsaContactTypeID" label="isa Contact Type ID" />
+    <column name="ContactDescription" fieldName="ContactDescription" label="Contact Description" />
+  </columns>
+</dataModel>

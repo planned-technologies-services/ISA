@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dataModel baseSchema="dbo" baseTable="isaItemMaster" alias="isaItemMaster" created="2017-06-27T16:12:14" modified="2017-06-29T15:21:01" x="20" y="20" xmlns="urn:schemas-codeontime-com:data-model">
+  <foreignKeys>
+    <foreignKey id="isaCategoryMaster" parentTableSchema="dbo" parentTableName="isaCategoryMaster" x="342" y="20">
+      <foreignKeyColumn columnName="isaCategoryMasterID" parentColumnName="isaCategoryMasterID" />
+    </foreignKey>
+  </foreignKeys>
+  <columns>
+    <column name="isaItemMasterID" fieldName="IsaItemMasterID" label="isa Item Master ID" />
+    <column name="isaCategoryMasterID" fieldName="IsaCategoryMasterID" label="isa Category Master ID" aliasColumnName="CategoryDescription" aliasForeignKey="isaCategoryMaster" />
+    <column name="CategoryDescription" fieldName="IsaCategoryMasterCategoryDescription" label="isa Category Master Category Description" foreignKey="isaCategoryMaster" />
+    <column name="CompanyCode" fieldName="IsaCategoryMasterCompanyCode" label="Isa Category Master Company Code" foreignKey="isaCategoryMaster" />
+    <column name="ItemDescription" fieldName="ItemDescription" label="Item Description" />
+  </columns>
+</dataModel>

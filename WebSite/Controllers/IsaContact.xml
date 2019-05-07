@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dataController name="IsaContact" conflictDetection="overwriteChanges" label="Isa Contact" xmlns="urn:schemas-codeontime-com:data-aquarium">
+  <commands>
+    <command id="command1" type="Text">
+      <text><![CDATA[
+select
+	"isaContact"."isaID" "IsaID"
+	,"isa"."CompanyCode" "IsaCompanyCode"
+	,"isaisaCompetitor"."CompetitorName" "IsaisaCompetitorName"
+	,"isaisaSite"."SiteName" "IsaisaSiteName"
+	,"isaisaSiteisaPropertyMgmt"."PropertyMgntName" "IsaisaSiteisaPropertyMgmtPropertyMgntName"
+	,"isaContact"."isaContactID" "IsaContactID"
+	,"TheisaContact"."FirstName" "TheisaContactFirstName"
+	,"TheisaContact"."LastName" "TheisaContactLastName"
+	,"TheisaContactType"."ContactDescription" "TheisaContactTypeContactDescription"
+from "dbo"."isaContact" "isaContact"
+	left join "dbo"."isa" "isa" on "isaContact"."isaID" = "isa"."isaID"
+	left join "dbo"."isaCompetitorMaster" "isaisaCompetitor" on "isa"."isaCompetitorID" = "isaisaCompetitor"."isaCompetitorMasterID"
+	left join "dbo"."isaSite" "isaisaSite" on "isa"."isaSiteID" = "isaisaSite"."isaSiteID"
+	left join "dbo"."isaPropertyMgmt" "isaisaSiteisaPropertyMgmt" on "isaisaSite"."isaPropertyMgmtID" = "isaisaSiteisaPropertyMgmt"."isaPropertyMgmtID"
+	left join "dbo"."isaContactMaster" "TheisaContact" on "isaContact"."isaContactID" = "TheisaContact"."isaContactID"
+	left join "dbo"."isaContactType" "TheisaContactType" on "TheisaContact"."ContactTypeID" = "TheisaContactType"."isaContactTypeID"
+]]></text>
+    </command>
+  </commands>
+  <fields>
+    <field name="IsaID" type="Int32" allowNulls="false" isPrimaryKey="true" label="isa ID" showInSummary="true">
+      <items style="Lookup" dataController="Isa" newDataView="createForm1" dataValueField="IsaID" dataTextField="CompanyCode" copy="IsaisaCompetitorName=IsaCompetitorName, IsaisaSiteName=IsaSiteName, IsaisaSiteisaPropertyMgmtPropertyMgntName=IsaSiteisaPropertyMgmtPropertyMgntName" />
+    </field>
+    <field name="IsaCompanyCode" type="String" readOnly="true" label="isa Company Code" length="3" />
+    <field name="IsaisaCompetitorName" type="String" readOnly="true" label="isaisa Competitor Name" length="50" />
+    <field name="IsaisaSiteName" type="String" readOnly="true" label="isaisa Site Name" length="50" />
+    <field name="IsaisaSiteisaPropertyMgmtPropertyMgntName" type="String" readOnly="true" label="isaisa Siteisa Property Mgmt Property Mgnt Name" length="50" />
+    <field name="IsaContactID" type="Int32" allowNulls="false" isPrimaryKey="true" label="isa Contact ID" showInSummary="true">
+      <items style="Lookup" dataController="IsaContactMaster" newDataView="createForm1" dataValueField="IsaContactID" dataTextField="FirstName" copy="TheisaContactLastName=LastName, TheisaContactTypeContactDescription=ContactTypeContactDescription" />
+    </field>
+    <field name="TheisaContactFirstName" type="String" readOnly="true" label="First Name" length="50" />
+    <field name="TheisaContactLastName" type="String" readOnly="true" label="Last Name" length="50" />
+    <field name="TheisaContactTypeContactDescription" type="String" readOnly="true" label="Contact Type" length="50" />
+  </fields>
+  <views>
+    <view id="grid1" type="Grid" commandId="command1" label="Contacts">
+      <headerText />
+      <dataFields>
+        <dataField fieldName="IsaID" aliasFieldName="IsaCompanyCode" />
+        <dataField fieldName="IsaisaCompetitorName" columns="50" />
+        <dataField fieldName="IsaisaSiteName" columns="50" />
+        <dataField fieldName="IsaisaSiteisaPropertyMgmtPropertyMgntName" columns="50" />
+        <dataField fieldName="IsaContactID" aliasFieldName="TheisaContactFirstName" />
+        <dataField fieldName="TheisaContactLastName" columns="50" />
+        <dataField fieldName="TheisaContactTypeContactDescription" columns="50" />
+      </dataFields>
+    </view>
+    <view id="editForm1" type="Form" commandId="command1" label="Review Contact">
+      <headerText />
+      <categories>
+        <category id="c1" headerText="Isa Contact" flow="NewColumn">
+          <description><![CDATA[$DefaultEditDescription]]></description>
+          <dataFields>
+            <dataField fieldName="IsaID" aliasFieldName="IsaCompanyCode" />
+            <dataField fieldName="IsaisaCompetitorName" columns="50" />
+            <dataField fieldName="IsaisaSiteName" columns="50" />
+            <dataField fieldName="IsaisaSiteisaPropertyMgmtPropertyMgntName" columns="50" />
+            <dataField fieldName="IsaContactID" aliasFieldName="TheisaContactFirstName" />
+            <dataField fieldName="TheisaContactLastName" columns="50" />
+            <dataField fieldName="TheisaContactTypeContactDescription" columns="50" />
+          </dataFields>
+        </category>
+      </categories>
+    </view>
+    <view id="createForm1" type="Form" commandId="command1" label="New Contact">
+      <headerText />
+      <categories>
+        <category id="c1" headerText="New Isa Contact" flow="NewColumn">
+          <description><![CDATA[$DefaultNewDescription]]></description>
+          <dataFields>
+            <dataField fieldName="IsaID" aliasFieldName="IsaCompanyCode" />
+            <dataField fieldName="IsaisaCompetitorName" columns="50" />
+            <dataField fieldName="IsaisaSiteName" columns="50" />
+            <dataField fieldName="IsaisaSiteisaPropertyMgmtPropertyMgntName" columns="50" />
+            <dataField fieldName="IsaContactID" aliasFieldName="TheisaContactFirstName" />
+            <dataField fieldName="TheisaContactLastName" columns="50" />
+            <dataField fieldName="TheisaContactTypeContactDescription" columns="50" />
+          </dataFields>
+        </category>
+      </categories>
+    </view>
+  </views>
+  <actions>
+    <actionGroup id="ag1" scope="Grid">
+      <action id="a1" commandName="Select" commandArgument="editForm1" />
+      <action id="a2" commandName="Edit" />
+      <action id="a3" commandName="Delete" />
+      <action id="a6" />
+      <action id="a7" commandName="New" commandArgument="grid1" />
+      <action id="a8" commandName="Duplicate" commandArgument="createForm1" />
+    </actionGroup>
+    <actionGroup id="ag2" scope="Form">
+      <action id="a1" commandName="Edit" />
+      <action id="a2" commandName="Delete" />
+      <action id="a3" commandName="Cancel" />
+      <action id="a4" whenLastCommandName="Edit" commandName="Update" commandArgument="Save" />
+      <action id="a5" whenLastCommandName="Edit" commandName="Cancel" />
+      <action id="a6" whenLastCommandName="New" commandName="Insert" commandArgument="Save" />
+      <action id="a7" whenLastCommandName="New" commandName="Insert" commandArgument="SaveAndNew" />
+      <action id="a8" whenLastCommandName="New" commandName="Cancel" />
+      <action id="a9" whenLastCommandName="Duplicate" commandName="Insert" />
+      <action id="a10" whenLastCommandName="Duplicate" commandName="Cancel" />
+      <action id="a13" whenLastCommandName="Insert" whenLastCommandArgument="Save" whenView="createForm1" commandName="Select" commandArgument="editForm1" whenClientScript="this.hasDetails()" />
+      <action id="a14" whenLastCommandName="Insert" whenLastCommandArgument="SaveAndNew" commandName="New" commandArgument="createForm1" />
+    </actionGroup>
+    <actionGroup id="ag3" scope="ActionBar" headerText="New" flat="true">
+      <action id="a1" commandName="New" commandArgument="createForm1" cssClass="NewIcon" />
+    </actionGroup>
+    <actionGroup id="ag4" scope="ActionBar" headerText="Edit/Delete" flat="true">
+      <action id="a1" whenKeySelected="true" commandName="Edit" commandArgument="editForm1" cssClass="EditIcon" whenView="grid1" />
+      <action id="a2" whenKeySelected="true" commandName="Delete" cssClass="DeleteIcon" whenView="grid1" />
+    </actionGroup>
+    <actionGroup id="ag5" scope="ActionBar" headerText="Actions">
+      <action id="a1" commandName="ExportCsv" />
+      <action id="a2" />
+      <action id="a3" commandName="ExportRowset" />
+      <action id="a4" commandName="ExportRss" />
+      <action id="a5" />
+      <action id="a6" commandName="Import" commandArgument="createForm1" />
+      <action id="a7" commandName="DataSheet" />
+      <action id="a8" commandName="Grid" />
+    </actionGroup>
+    <actionGroup id="ag6" scope="ActionBar" headerText="Record">
+      <action id="a1" whenLastCommandName="Edit" commandName="Update" />
+      <action id="a2" whenLastCommandName="Edit" commandName="Cancel" />
+      <action id="a3" whenLastCommandName="New" commandName="Insert" />
+      <action id="a4" whenLastCommandName="New" commandName="Cancel" />
+    </actionGroup>
+    <actionGroup id="ag7" scope="ActionBar" headerText="Report">
+      <action id="a1" commandName="ReportAsPdf" />
+      <action id="a2" commandName="ReportAsImage" />
+      <action id="a3" commandName="ReportAsExcel" />
+      <action id="a4" commandName="ReportAsWord" />
+    </actionGroup>
+    <actionGroup id="ag8" scope="Row">
+      <action id="a4" whenLastCommandName="Edit" commandName="Update" />
+      <action id="a5" whenLastCommandName="Edit" commandName="Cancel" />
+      <action id="a6" whenLastCommandName="New" commandName="Insert" />
+      <action id="a7" whenLastCommandName="New" commandName="Cancel" />
+    </actionGroup>
+  </actions>
+</dataController>

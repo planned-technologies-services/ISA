@@ -1,0 +1,99 @@
+﻿{
+  "name": "Vantage",
+  "color": "#ea3625",
+  "header": {
+    "background": null,
+    "border": null,
+    //"paddingTop": 0,
+    "icon": {
+      "default": "#ea3625",
+      "hover": "#BA2012",
+      "active": "#BA2012",
+      "selected": null,
+      "backgroundOpacity": null
+    },
+    "text": {
+      "default": null,
+      "hover": null,
+      "active": "#BA2012",
+      "logo": null,
+      "hoverBackground": null,
+      "selectedBackground": null
+    },
+    "split": {
+      "background": null,
+      "icon": { "default": null }
+    }
+  },
+  "panel": {
+    "icon": {
+      "default": "#ea3625",
+      "hover": "#BA2012",
+      "selected": null
+    }
+  },
+  "form": {
+    "header": {
+      //"background": "transparent",
+      //"border": "transparent"
+    },
+    "tabColor": "#ea3625"
+  },
+  "buttons": {
+    "promo": {
+      "background": "#ea3625",
+      "icon": {
+        "default": "#fff"
+      }
+    },
+    "wizard": {
+      "border": "#ea3625",
+      "background": "#ea3625",
+      "text": {
+        "default": "#fff"
+      }
+    }
+  },
+  "sidebar": {
+    "full": {
+      "background": null,
+      "border": null,
+      "selectedColor": "#ea3625",
+      "icon": {
+        "default": "#ea3625",
+        "hover": "#BA2012",
+        "active": "#d83020"
+      },
+      "toolbar": {
+        "background": null,
+        "icon": {
+          "default": "#ea3625",
+          "hover": "#BA2012",
+          "active": null
+        },
+        "border": null
+      }
+    },
+    "mini": {
+      "background": null,
+      "border": null,
+      "icon": {
+        "default": "#ea3625",
+        "hover": "#BA2012",
+        "active": null
+      },
+      "toolbar": {
+        "background": null,
+        "icon": {
+          "default": "#ea3625",
+          "hover": "#BA2012",
+          "active": null
+        },
+        "border": null
+      }
+    }
+  },
+  "system": {
+    "selectBar": "#ea3625"
+  }
+}

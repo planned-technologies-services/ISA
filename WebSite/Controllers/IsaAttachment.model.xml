@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dataModel baseSchema="dbo" baseTable="isaAttachment" alias="isaAttachment" created="2017-06-27T16:12:30" modified="2017-06-27T16:12:41" x="20" y="20" xmlns="urn:schemas-codeontime-com:data-model">
+  <foreignKeys>
+    <foreignKey id="isa" parentTableSchema="dbo" parentTableName="isa" x="327" y="20">
+      <foreignKeyColumn columnName="isaID" parentColumnName="isaID" />
+    </foreignKey>
+    <foreignKey id="isaisaCompetitor" parentTableSchema="dbo" parentTableName="isaCompetitorMaster" baseForeignKey="isa" x="620" y="20">
+      <foreignKeyColumn columnName="isaCompetitorID" parentColumnName="isaCompetitorMasterID" />
+    </foreignKey>
+    <foreignKey id="isaisaSite" parentTableSchema="dbo" parentTableName="isaSite" baseForeignKey="isa" x="620" y="183">
+      <foreignKeyColumn columnName="isaSiteID" parentColumnName="isaSiteID" />
+    </foreignKey>
+    <foreignKey id="isaisaSiteisaPropertyMgmt" parentTableSchema="dbo" parentTableName="isaPropertyMgmt" baseForeignKey="isaisaSite" x="956" y="20">
+      <foreignKeyColumn columnName="isaPropertyMgmtID" parentColumnName="isaPropertyMgmtID" />
+    </foreignKey>
+  </foreignKeys>
+  <columns>
+    <column name="isaAttachmentID" fieldName="IsaAttachmentID" label="isa Attachment ID" />
+    <column name="Attachment" fieldName="Attachment" label="Attachment" />
+    <column name="FileName" fieldName="FileName" label="File Name" />
+    <column name="Length" fieldName="Length" label="Length" />
+    <column name="ContentType" fieldName="ContentType" label="Content Type" />
+    <column name="isaID" fieldName="IsaID" label="isa ID" aliasColumnName="CompanyCode" aliasForeignKey="isa" />
+    <column name="CompanyCode" fieldName="IsaCompanyCode" label="isa Company Code" foreignKey="isa" />
+    <column name="CompetitorName" fieldName="IsaisaCompetitorName" label="isaisa Competitor Name" foreignKey="isaisaCompetitor" />
+    <column name="SiteName" fieldName="IsaisaSiteName" label="isaisa Site Name" foreignKey="isaisaSite" />
+    <column name="PropertyMgntName" fieldName="IsaisaSiteisaPropertyMgmtPropertyMgntName" label="isaisa Siteisa Property Mgmt Property Mgnt Name" foreignKey="isaisaSiteisaPropertyMgmt" />
+  </columns>
+</dataModel>

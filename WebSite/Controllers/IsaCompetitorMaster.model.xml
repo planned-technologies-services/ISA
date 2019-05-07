@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dataModel baseSchema="dbo" baseTable="isaCompetitorMaster" alias="isaCompetitorMaster" created="2017-06-27T16:11:13" modified="2017-06-27T16:11:18" x="20" y="20" xmlns="urn:schemas-codeontime-com:data-model">
+  <foreignKeys />
+  <columns>
+    <column name="isaCompetitorMasterID" fieldName="IsaCompetitorMasterID" label="isa Competitor Master ID" />
+    <column name="CompetitorName" fieldName="CompetitorName" label="Competitor Name" />
+  </columns>
+</dataModel>

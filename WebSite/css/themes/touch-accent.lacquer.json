@@ -1,0 +1,78 @@
+﻿{
+  "name": "Lacquer",
+  "color": "#64080d",
+  "header": {
+    "background": "#64080d",
+    "border": "#64080d",
+    "paddingTop": 0,
+    "icon": {
+      "default": "#eee",
+      "hover": "#fff",
+      "selected": null,
+      "backgroundOpacity": "0.2"
+    },
+    "text": {
+      "default": "#f5f5f5",
+      "hover": "#fff",
+      "logo": "#fff",
+      "hoverBackground": "rgba(0,0,0,0.1)",
+      "selectedBackground": "rgba(0,0,0,0.2)"
+    },
+    "split": {
+      "background": null,
+      "icon": { "default": null }
+    }
+  },
+  "panel": {
+    "icon": {
+      "default": "#64080d",
+      "hover": "#390507",
+      "selected": null
+    }
+  },
+  "form": {
+    "header": {
+      "background": "transparent", "border": "transparent"
+    }
+  },
+  "buttons": {
+    "promo": {
+      "background": "#64080d",
+      "icon": { "default": null }
+    }
+  },
+  "sidebar": {
+    "full": {
+      "background": null,
+      "border": null,
+      "icon": { "default": null },
+      "toolbar": {
+        "background": null,
+        "icon": {
+          "default": null,
+          "hover": null,
+          "active": null
+        },
+        "border": null
+      }
+    },
+    "mini": {
+      "background": null,
+      "border": null,
+      "icon": { "default": null },
+      "toolbar": {
+        "background": null,
+        "icon": {
+          "default": null,
+          "hover": null,
+          "active": null
+        },
+        "border": null
+      }
+    }
+  }
+  //,"system": {
+  //  "selected": null,
+  //  "active": null
+  //}
+}

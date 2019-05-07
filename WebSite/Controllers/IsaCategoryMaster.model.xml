@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dataModel baseSchema="dbo" baseTable="isaCategoryMaster" alias="isaCategoryMaster" created="2017-06-27T16:12:01" modified="2017-06-27T16:12:08" x="20" y="20" xmlns="urn:schemas-codeontime-com:data-model">
+  <foreignKeys />
+  <columns>
+    <column name="isaCategoryMasterID" fieldName="IsaCategoryMasterID" label="isa Category Master ID" />
+    <column name="CategoryDescription" fieldName="CategoryDescription" label="Category Description" />
+    <column name="CompanyCode" fieldName="CompanyCode" label="Company Code" />
+  </columns>
+</dataModel>

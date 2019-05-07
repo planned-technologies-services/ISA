@@ -1,0 +1,182 @@
+<log xmlns="urn:schemas-codeontime-com:xml-builder" xmlns:aquarium="urn:schemas-codeontime-com:data-aquarium" xmlns:app="urn:schemas-codeontime-com:data-aquarium-application" xmlns:a="urn:schemas-codeontime-com:data-aquarium">
+  <c y="NodeSet" t="2017-06-27T22:13:09">
+    <page name="IsaSite" />
+    <rename>Sites</rename>
+  </c>
+  <c y="NodeSet" t="2017-06-27T22:13:23">
+    <page name="IsaPropertyMgmt" />
+    <rename>Property Mgmt</rename>
+  </c>
+  <c y="NodeSet" t="2017-06-27T22:13:47">
+    <page name="IsaCompetitorMaster" />
+    <rename>Competitors</rename>
+  </c>
+  <c y="NodeSet" t="2017-06-27T22:14:00">
+    <page name="IsaDetail" />
+    <rename>Details</rename>
+  </c>
+  <c y="NodeSet" t="2017-06-27T22:14:12">
+    <page name="IsaCategoryMaster" />
+    <rename>Categorys</rename>
+  </c>
+  <c y="NodeSet" t="2017-06-27T22:14:26">
+    <page name="IsaItemMaster" />
+    <rename>Items</rename>
+  </c>
+  <c y="NodeSet" t="2017-06-27T22:14:36">
+    <page name="IsaAttachment" />
+    <rename>Attachments</rename>
+  </c>
+  <c y="NodeSet" t="2017-06-27T22:15:21">
+    <page name="IsaContact" />
+    <rename>Contacts</rename>
+  </c>
+  <c y="NodeSet" t="2017-06-27T22:15:59">
+    <page name="IsaContactMaster" />
+    <rename>Contacts Master</rename>
+  </c>
+  <c y="NodeSet" t="2017-06-27T22:16:16">
+    <page name="IsaContactType" />
+    <rename>Contact Types</rename>
+  </c>
+  <c y="NodeSet" t="2017-06-28T09:52:12">
+    <page name="Isa" />
+    <rename>ISA</rename>
+  </c>
+  <c y="NodeSet" t="2017-06-28T12:06:38">
+    <page name="IsaTemplate" />
+    <rename>Template</rename>
+  </c>
+  <c y="NodeSet" t="2017-06-28T12:28:18">
+    <page name="IsaCategoryMaster" />
+    <rename>Categories</rename>
+  </c>
+  <c y="NodeSet" t="2017-06-28T12:28:41">
+    <page name="IsaContactMaster" />
+    <rename>Contact Master</rename>
+  </c>
+  <c y="NodeSet" t="2017-06-28T13:36:58">
+    <pages />
+    <insert type="page">
+      <Name>Maintenance</Name>
+      <Index>101</Index>
+      <Generate>Always</Generate>
+      <UseExtenders>false</UseExtenders>
+      <Path>Maintenance</Path>
+      <Title>Maintenance</Title>
+      <Roles>*</Roles>
+    </insert>
+  </c>
+  <c y="NodeSet" t="2017-06-28T13:37:20">
+    <page name="IsaContactMaster" />
+    <before>
+      <page name="Maintenance" />
+    </before>
+  </c>
+  <c y="NodeSet" t="2017-06-28T13:37:23">
+    <page name="Maintenance" />
+    <move>
+      <page name="IsaTemplate" />
+    </move>
+  </c>
+  <c y="NodeSet" t="2017-06-28T13:37:27">
+    <page name="Maintenance" />
+    <move>
+      <page name="IsaContactMaster" />
+    </move>
+  </c>
+  <c y="NodeSet" t="2017-06-28T13:37:32">
+    <page name="Maintenance" />
+    <move>
+      <page name="IsaContactType" />
+    </move>
+  </c>
+  <c y="NodeSet" t="2017-06-28T13:37:37">
+    <page name="Maintenance" />
+    <move>
+      <page name="IsaCategoryMaster" />
+    </move>
+  </c>
+  <c y="NodeSet" t="2017-06-28T13:37:57">
+    <page name="Maintenance" />
+    <move>
+      <page name="IsaCompetitorMaster" />
+    </move>
+  </c>
+  <c y="NodeSet" t="2017-06-28T13:38:02">
+    <page name="Maintenance" />
+    <move>
+      <page name="IsaPropertyMgmt" />
+    </move>
+  </c>
+  <c y="NodeSet" t="2017-06-28T13:38:09">
+    <page name="IsaItemMaster" />
+    <after>
+      <page name="IsaContact" />
+    </after>
+  </c>
+  <c y="NodeSet" t="2017-06-28T13:38:15">
+    <page name="Maintenance" />
+    <move>
+      <page name="IsaItemMaster" />
+    </move>
+  </c>
+  <c y="NodeSet" t="2017-06-28T13:38:21">
+    <page name="Maintenance" />
+    <move>
+      <page name="IsaDetail" />
+    </move>
+  </c>
+  <c y="NodeSet" t="2017-06-28T13:38:26">
+    <page name="Maintenance" />
+    <move>
+      <page name="IsaAttachment" />
+    </move>
+  </c>
+  <c y="NodeSet" t="2017-06-28T13:38:31">
+    <page name="IsaAttachment" />
+    <update>
+      <UseExtenders>false</UseExtenders>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-29T14:22:47">
+    <page name="Maintenance" />
+    <after>
+      <page name="IsaDetailPss" />
+    </after>
+  </c>
+  <c y="NodeSet" t="2017-06-29T14:22:47">
+    <page name="Maintenance" />
+    <after>
+      <page name="IsaDetailPls" />
+    </after>
+  </c>
+  <c y="NodeSet" t="2017-06-29T14:22:47">
+    <page name="Maintenance" />
+    <after>
+      <page name="IsaDetailPbs" />
+    </after>
+  </c>
+  <c y="NodeSet" t="2017-06-29T14:22:56">
+    <page name="IsaDetail" />
+    <before>
+      <page name="IsaDetailPls" />
+    </before>
+  </c>
+  <c y="NodeSet" t="2017-06-29T14:23:00">
+    <page name="IsaDetailPls" />
+    <before>
+      <page name="IsaDetailPbs" />
+    </before>
+  </c>
+  <c y="NodeSet" t="2017-06-29T14:23:02">
+    <page name="IsaDetailPbs" />
+    <before>
+      <page name="IsaDetailPss" />
+    </before>
+  </c>
+  <c y="NodeSet" t="2017-06-29T14:23:21">
+    <page name="IsaDetail" />
+    <delete />
+  </c>
+</log>

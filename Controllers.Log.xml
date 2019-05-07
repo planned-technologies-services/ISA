@@ -1,0 +1,2790 @@
+<log xmlns="urn:schemas-codeontime-com:xml-builder" xmlns:aquarium="urn:schemas-codeontime-com:data-aquarium" xmlns:a="urn:schemas-codeontime-com:data-aquarium">
+  <c y="NodeSet" t="2017-06-27T16:18:36">
+    <controller name="IsaDetail" />
+    <view id="createForm1" />
+    <dataField fieldName="IsaID" />
+    <update>
+      <Alias>IsaisaSiteName</Alias>
+      <Hidden>false</Hidden>
+      <DataViewShowInSummary>false</DataViewShowInSummary>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-27T16:20:19">
+    <controller name="IsaDetail" />
+    <field name="IsaisaSiteName" />
+    <update>
+      <Label>Site Name</Label>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-27T16:37:37">
+    <controller name="Isa" />
+    <insert type="field">
+      <Name>Details</Name>
+      <Type>String</Type>
+      <AllowNulls>true</AllowNulls>
+      <IsPrimaryKey>false</IsPrimaryKey>
+      <IsVirtual>false</IsVirtual>
+      <Computed>false</Computed>
+      <Calculated>false</Calculated>
+      <CausesCalculate>false</CausesCalculate>
+      <OnDemand>false</OnDemand>
+      <Label>Details</Label>
+      <ReadOnly>false</ReadOnly>
+      <ShowInSummary>false</ShowInSummary>
+      <HtmlEncode>true</HtmlEncode>
+      <FormatOnClient>true</FormatOnClient>
+      <ItemsStyle>DropDownList</ItemsStyle>
+      <ItemsDataController>IsaDetail</ItemsDataController>
+      <ItemsDataView>editForm1</ItemsDataView>
+      <ItemsDataValueField>IsaItemMasterID</ItemsDataValueField>
+      <ItemsDataTextField>IsaItemMasterItemDescription</ItemsDataTextField>
+      <ItemsNewDataView>createForm1</ItemsNewDataView>
+      <SearchOnStart>false</SearchOnStart>
+      <AutoSelect>false</AutoSelect>
+      <ItemsLetters>false</ItemsLetters>
+      <AllowQBE>true</AllowQBE>
+      <AllowSorting>true</AllowSorting>
+      <MaskType>None</MaskType>
+      <AllowLEV>false</AllowLEV>
+    </insert>
+  </c>
+  <c y="NodeSet" t="2017-06-27T16:38:09">
+    <controller name="Isa" />
+    <view id="createForm1" />
+    <category id="c1" />
+    <move>
+      <controller name="Isa" />
+      <field name="Details" />
+    </move>
+  </c>
+  <c y="NodeSet" t="2017-06-27T16:38:15">
+    <controller name="Isa" />
+    <view id="createForm1" />
+    <category id="c1" />
+    <dataField fieldName="ReqestedDate" />
+    <before>
+      <controller name="Isa" />
+      <view id="createForm1" />
+      <category id="c1" />
+      <dataField fieldName="Details" />
+    </before>
+  </c>
+  <c y="NodeSet" t="2017-06-27T16:38:45">
+    <controller name="Isa" />
+    <view id="createForm1" />
+    <category id="c1" />
+    <dataField fieldName="Details" />
+    <delete />
+  </c>
+  <c y="NodeSet" t="2017-06-27T16:39:06">
+    <controller name="Isa" />
+    <field name="Details" />
+    <update>
+      <ItemsStyle>ListBox</ItemsStyle>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-27T16:42:46">
+    <controller name="Isa" />
+    <field name="Details" />
+    <update>
+      <ItemsStyle>DropDownList</ItemsStyle>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-27T16:42:58">
+    <controller name="Isa" />
+    <view id="createForm1" />
+    <move>
+      <controller name="Isa" />
+      <field name="Details" />
+    </move>
+  </c>
+  <c y="NodeSet" t="2017-06-27T16:43:02">
+    <controller name="Isa" />
+    <view id="editForm1" />
+    <move>
+      <controller name="Isa" />
+      <field name="Details" />
+    </move>
+  </c>
+  <c y="NodeSet" t="2017-06-27T16:43:05">
+    <controller name="Isa" />
+    <view id="grid1" />
+    <move>
+      <controller name="Isa" />
+      <field name="Details" />
+    </move>
+  </c>
+  <c y="NodeSet" t="2017-06-27T16:43:15">
+    <controller name="Isa" />
+    <view id="createForm1" />
+    <category id="c1" />
+    <dataField fieldName="IsaSiteID" />
+    <before>
+      <controller name="Isa" />
+      <view id="createForm1" />
+      <category id="c1" />
+      <dataField fieldName="Details" />
+    </before>
+  </c>
+  <c y="NodeSet" t="2017-06-27T16:43:24">
+    <controller name="Isa" />
+    <view id="createForm1" />
+    <category id="c1" />
+    <dataField fieldName="IsaSiteisaPropertyMgmtPropertyMgntName" />
+    <before>
+      <controller name="Isa" />
+      <view id="createForm1" />
+      <category id="c1" />
+      <dataField fieldName="Details" />
+    </before>
+  </c>
+  <c y="NodeSet" t="2017-06-27T16:47:38">
+    <controller name="Isa" />
+    <field name="Details" />
+    <update>
+      <ItemsDataController>IsaItemMaster</ItemsDataController>
+      <ItemsDataView>grid1</ItemsDataView>
+      <ItemsDataTextField>ItemDescription</ItemsDataTextField>
+      <ItemsTargetController>IsaDetail</ItemsTargetController>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-27T19:40:36">
+    <controller name="Isa" />
+    <move>
+      <controller name="IsaAttachment" />
+    </move>
+  </c>
+  <c y="NodeSet" t="2017-06-27T19:40:58">
+    <controller name="Isa" />
+    <view id="editForm1" />
+    <move>
+      <controller name="Isa" />
+      <field name="IsaAttachment" />
+    </move>
+  </c>
+  <c y="NodeSet" t="2017-06-27T19:41:06">
+    <controller name="Isa" />
+    <view id="createForm1" />
+    <move>
+      <controller name="Isa" />
+      <field name="IsaAttachment" />
+    </move>
+  </c>
+  <c y="NodeSet" t="2017-06-27T19:43:20">
+    <controller name="Isa" />
+    <field name="IsaAttachment" />
+    <update>
+      <Label>Attachment</Label>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-27T19:44:32">
+    <controller name="IsaAttachment" />
+    <view id="createForm1" />
+    <category id="c1" />
+    <update>
+      <HeaderText>Add Attachment</HeaderText>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-27T19:56:00">
+    <controller name="Isa" />
+    <view id="grid1" />
+    <update>
+      <Label>All Companies</Label>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-27T22:06:01">
+    <controller name="Isa" />
+    <field name="IsaSiteisaPropertyMgmtPropertyMgntName" />
+    <update>
+      <Label>Property Mgnt Name</Label>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-27T22:07:27">
+    <controller name="Isa" />
+    <field name="IsaCompetitorName" />
+    <update>
+      <Label>Competitor Name</Label>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-27T22:08:17">
+    <controller name="Isa" />
+    <field name="IsaSiteName" />
+    <update>
+      <Label>Site Name</Label>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-27T22:10:22">
+    <controller name="IsaSite" />
+    <view id="createForm1" />
+    <category id="c1" />
+    <update>
+      <HeaderText>New Site</HeaderText>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-27T22:10:45">
+    <controller name="IsaSite" />
+    <field name="IsaPropertyMgmtPropertyMgntName" />
+    <update>
+      <Label>Property Mgnt Name</Label>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-27T22:12:21">
+    <controller name="IsaPropertyMgmt" />
+    <view id="createForm1" />
+    <category id="c1" />
+    <update>
+      <HeaderText>New Property Mgmt</HeaderText>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-28T08:27:42">
+    <controller name="Isa" />
+    <move>
+      <controller name="IsaDetail" />
+    </move>
+  </c>
+  <c y="NodeSet" t="2017-06-28T08:28:07">
+    <controller name="Isa" />
+    <view id="createForm1" />
+    <move>
+      <controller name="Isa" />
+      <field name="IsaDetail" />
+    </move>
+  </c>
+  <c y="NodeSet" t="2017-06-28T08:28:16">
+    <controller name="Isa" />
+    <view id="editForm1" />
+    <move>
+      <controller name="Isa" />
+      <field name="IsaDetail" />
+    </move>
+  </c>
+  <c y="NodeSet" t="2017-06-28T08:30:54">
+    <controller name="Isa" />
+    <field name="IsaDetail" />
+    <update>
+      <Label>Detail</Label>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-28T08:31:31">
+    <controller name="Isa" />
+    <view id="editForm1" />
+    <category id="c1" />
+    <dataField fieldName="Details" />
+    <delete />
+  </c>
+  <c y="NodeSet" t="2017-06-28T08:31:38">
+    <controller name="Isa" />
+    <view id="createForm1" />
+    <category id="c1" />
+    <dataField fieldName="Details" />
+    <delete />
+  </c>
+  <c y="NodeSet" t="2017-06-28T08:32:42">
+    <controller name="IsaDetail" />
+    <view id="grid1" />
+    <update>
+      <Label>Detail</Label>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-28T08:33:19">
+    <controller name="IsaDetail" />
+    <view id="createForm1" />
+    <update>
+      <Label>New Detail</Label>
+      <HeaderText />
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-28T08:33:33">
+    <controller name="IsaDetail" />
+    <view id="editForm1" />
+    <update>
+      <Label>Review Detail</Label>
+      <HeaderText />
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-28T08:34:25">
+    <controller name="IsaAttachment" />
+    <view id="grid1" />
+    <update>
+      <Label>Attachment</Label>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-28T08:34:32">
+    <controller name="IsaAttachment" />
+    <view id="grid1" />
+    <update>
+      <HeaderText />
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-28T08:34:44">
+    <controller name="IsaAttachment" />
+    <view id="editForm1" />
+    <update>
+      <Label>Review Attachment</Label>
+      <HeaderText />
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-28T08:34:57">
+    <controller name="IsaAttachment" />
+    <view id="createForm1" />
+    <update>
+      <Label>New Attachment</Label>
+      <HeaderText />
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-28T08:36:43">
+    <controller name="Isa" />
+    <view id="grid1" />
+    <dataField fieldName="Details" />
+    <delete />
+  </c>
+  <c y="NodeSet" t="2017-06-28T08:36:48">
+    <controller name="Isa" />
+    <view id="grid1" />
+    <move>
+      <controller name="Isa" />
+      <field name="IsaDetail" />
+    </move>
+  </c>
+  <c y="NodeSet" t="2017-06-28T08:41:57">
+    <controller name="IsaDetail" />
+    <field name="IsaisaCompetitorName" />
+    <update>
+      <Label>Competitor Name</Label>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-28T08:42:18">
+    <controller name="IsaDetail" />
+    <field name="IsaisaSiteisaPropertyMgmtPropertyMgntName" />
+    <update>
+      <Label>Property Mgnt Name</Label>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-28T08:42:35">
+    <controller name="IsaDetail" />
+    <field name="IsaItemMasterID" />
+    <update>
+      <Label>Item Master ID</Label>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-28T08:42:47">
+    <controller name="IsaDetail" />
+    <field name="IsaItemMasterItemDescription" />
+    <update>
+      <Label>Item Description</Label>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-28T08:43:03">
+    <controller name="IsaDetail" />
+    <field name="IsaItemMasterisaCategoryMasterCategoryDescription" />
+    <update>
+      <Label>Category</Label>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-28T08:43:15">
+    <controller name="IsaDetail" />
+    <field name="IsaItemMasterItemDescription" />
+    <update>
+      <Label>Item</Label>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-28T08:43:43">
+    <controller name="IsaSite" />
+    <field name="IsaPropertyMgmtID" />
+    <update>
+      <Label>Property Mgmt ID</Label>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-28T08:44:21">
+    <controller name="IsaItemMaster" />
+    <field name="IsaCategoryMasterCategoryDescription" />
+    <update>
+      <Label>Category</Label>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-28T08:45:02">
+    <controller name="IsaCategoryMaster" />
+    <field name="CategoryDescription" />
+    <update>
+      <Label>Category</Label>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-28T08:45:31">
+    <controller name="IsaCategoryMaster" />
+    <field name="CompanyCode" />
+    <insert type="item">
+      <Value>PBS</Value>
+      <Text>PBS</Text>
+    </insert>
+  </c>
+  <c y="NodeSet" t="2017-06-28T08:45:44">
+    <controller name="IsaCategoryMaster" />
+    <field name="CompanyCode" />
+    <insert type="item">
+      <Value>PSS</Value>
+      <Text>PSS</Text>
+    </insert>
+  </c>
+  <c y="NodeSet" t="2017-06-28T08:45:54">
+    <controller name="IsaCategoryMaster" />
+    <field name="CompanyCode" />
+    <insert type="item">
+      <Value>PLS</Value>
+      <Text>PLS</Text>
+    </insert>
+  </c>
+  <c y="NodeSet" t="2017-06-28T08:46:23">
+    <controller name="IsaCategoryMaster" />
+    <field name="CompanyCode" />
+    <update>
+      <ItemsStyle>RadioButtonList</ItemsStyle>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-28T08:46:45">
+    <controller name="Isa" />
+    <field name="CompanyCode" />
+    <insert type="item">
+      <Value>PBS</Value>
+      <Text>PBS</Text>
+    </insert>
+  </c>
+  <c y="NodeSet" t="2017-06-28T08:46:58">
+    <controller name="Isa" />
+    <field name="CompanyCode" />
+    <insert type="item">
+      <Value>PSS</Value>
+      <Text>PSS</Text>
+    </insert>
+  </c>
+  <c y="NodeSet" t="2017-06-28T08:47:09">
+    <controller name="Isa" />
+    <field name="CompanyCode" />
+    <insert type="item">
+      <Value>PLS</Value>
+      <Text>PLS</Text>
+    </insert>
+  </c>
+  <c y="NodeSet" t="2017-06-28T08:47:27">
+    <controller name="Isa" />
+    <field name="CompanyCode" />
+    <update>
+      <ItemsStyle>RadioButtonList</ItemsStyle>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-28T08:58:39">
+    <controller name="Isa" />
+    <field name="Details" />
+    <delete />
+  </c>
+  <c y="NodeSet" t="2017-06-28T09:01:19">
+    <controller name="Isa" />
+    <view id="grid1" />
+    <move>
+      <controller name="Isa" />
+      <field name="IsaAttachment" />
+    </move>
+  </c>
+  <c y="NodeSet" t="2017-06-28T09:01:23">
+    <controller name="Isa" />
+    <view id="grid1" />
+    <dataField fieldName="IsaDetail" />
+    <before>
+      <controller name="Isa" />
+      <view id="grid1" />
+      <dataField fieldName="IsaAttachment" />
+    </before>
+  </c>
+  <c y="NodeSet" t="2017-06-28T09:03:13">
+    <controller name="Isa" />
+    <view id="createForm1" />
+    <update>
+      <Label>New ISA</Label>
+      <HeaderText />
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-28T09:16:18">
+    <controller name="IsaSite" />
+    <field name="SiteType" />
+    <insert type="item">
+      <Value>C</Value>
+      <Text>Commercial</Text>
+    </insert>
+  </c>
+  <c y="NodeSet" t="2017-06-28T09:17:08">
+    <controller name="IsaSite" />
+    <field name="SiteType" />
+    <insert type="item">
+      <Value>R</Value>
+      <Text>Residential</Text>
+    </insert>
+  </c>
+  <c y="NodeSet" t="2017-06-28T09:17:47">
+    <controller name="IsaSite" />
+    <field name="SiteType" />
+    <update>
+      <ItemsStyle>RadioButtonList</ItemsStyle>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-28T09:18:44">
+    <controller name="Isa" />
+    <field name="ReqestedDate" />
+    <update>
+      <Label>Requested Date</Label>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-28T09:24:29">
+    <controller name="IsaSite" />
+    <field name="TrashDays" />
+    <insert type="item">
+      <Value>Sun</Value>
+      <Text>Sunday</Text>
+    </insert>
+  </c>
+  <c y="NodeSet" t="2017-06-28T09:24:49">
+    <controller name="IsaSite" />
+    <field name="TrashDays" />
+    <insert type="item">
+      <Value>Mon</Value>
+      <Text>Monday</Text>
+    </insert>
+  </c>
+  <c y="NodeSet" t="2017-06-28T09:25:28">
+    <controller name="IsaSite" />
+    <field name="TrashDays" />
+    <insert type="item">
+      <Value>Tue</Value>
+      <Text>Tuesday</Text>
+    </insert>
+  </c>
+  <c y="NodeSet" t="2017-06-28T09:25:55">
+    <controller name="IsaSite" />
+    <field name="TrashDays" />
+    <insert type="item">
+      <Value>Wed</Value>
+      <Text>Wednesday</Text>
+    </insert>
+  </c>
+  <c y="NodeSet" t="2017-06-28T09:26:13">
+    <controller name="IsaSite" />
+    <field name="TrashDays" />
+    <insert type="item">
+      <Value>Thu</Value>
+      <Text>Thursday</Text>
+    </insert>
+  </c>
+  <c y="NodeSet" t="2017-06-28T09:26:29">
+    <controller name="IsaSite" />
+    <field name="TrashDays" />
+    <insert type="item">
+      <Value>Fri</Value>
+      <Text>Friday</Text>
+    </insert>
+  </c>
+  <c y="NodeSet" t="2017-06-28T09:26:58">
+    <controller name="IsaSite" />
+    <field name="TrashDays" />
+    <insert type="item">
+      <Value>Sat</Value>
+      <Text>Saturday</Text>
+    </insert>
+  </c>
+  <c y="NodeSet" t="2017-06-28T09:27:25">
+    <controller name="IsaSite" />
+    <field name="TrashDays" />
+    <update>
+      <ItemsStyle>CheckBoxList</ItemsStyle>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-28T09:28:59">
+    <controller name="IsaSite" />
+    <view id="editForm1" />
+    <dataField fieldName="TrashDays" />
+    <update>
+      <Columns>4</Columns>
+      <Rows>2</Rows>
+      <Hidden>false</Hidden>
+      <DataViewShowInSummary>false</DataViewShowInSummary>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-28T09:29:19">
+    <controller name="IsaSite" />
+    <view id="createForm1" />
+    <dataField fieldName="TrashDays" />
+    <update>
+      <Columns>4</Columns>
+      <Rows>2</Rows>
+      <Hidden>false</Hidden>
+      <DataViewShowInSummary>false</DataViewShowInSummary>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-28T09:31:44">
+    <controller name="IsaSite" />
+    <view id="createForm1" />
+    <update>
+      <Label>New Site</Label>
+      <HeaderText />
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-28T09:31:58">
+    <controller name="IsaSite" />
+    <view id="editForm1" />
+    <update>
+      <Label>Review Site</Label>
+      <HeaderText />
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-28T09:41:52">
+    <controller name="Isa" />
+    <move>
+      <controller name="IsaContact" />
+    </move>
+  </c>
+  <c y="NodeSet" t="2017-06-28T09:42:04">
+    <controller name="Isa" />
+    <view id="editForm1" />
+    <move>
+      <controller name="Isa" />
+      <field name="IsaContact" />
+    </move>
+  </c>
+  <c y="NodeSet" t="2017-06-28T09:48:17">
+    <controller name="IsaContact" />
+    <field name="TheisaContactFirstName" />
+    <update>
+      <Label>First Name</Label>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-28T09:48:29">
+    <controller name="IsaContact" />
+    <field name="TheisaContactLastName" />
+    <update>
+      <Label>Last Name</Label>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-28T09:49:19">
+    <controller name="IsaContact" />
+    <field name="TheisaContactTypeContactDescription" />
+    <update>
+      <Label>Contact Description</Label>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-28T09:49:41">
+    <controller name="IsaContact" />
+    <view id="grid1" />
+    <update>
+      <Label>Contacts</Label>
+      <HeaderText />
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-28T09:49:57">
+    <controller name="IsaContact" />
+    <view id="editForm1" />
+    <update>
+      <Label>Review Contact</Label>
+      <HeaderText />
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-28T09:50:14">
+    <controller name="IsaContact" />
+    <view id="createForm1" />
+    <update>
+      <Label>New Contact</Label>
+      <HeaderText />
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-28T09:50:57">
+    <controller name="IsaContactMaster" />
+    <field name="ContactTypeContactDescription" />
+    <update>
+      <Label>Contact Description</Label>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-28T09:53:07">
+    <controller name="IsaContactMaster" />
+    <view id="grid1" />
+    <update>
+      <Label>Contacts</Label>
+      <HeaderText />
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-28T09:53:32">
+    <controller name="IsaContactType" />
+    <view id="grid1" />
+    <update>
+      <Label>Contact Types</Label>
+      <HeaderText />
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-28T09:58:01">
+    <controller name="Isa" />
+    <insert type="rule">
+      <Type>Sql</Type>
+      <CommandName>Delete</CommandName>
+      <Phase>Before</Phase>
+      <Script>Delete FROM isaDetail
+where isaID = @isaID</Script>
+    </insert>
+  </c>
+  <c y="NodeSet" t="2017-06-28T10:00:21">
+    <controller name="Isa" />
+    <insert type="rule">
+      <Type>Sql</Type>
+      <CommandName>Delete</CommandName>
+      <Phase>Before</Phase>
+      <Script>Delete FROM isaAttachment
+where isaID = @isaID</Script>
+    </insert>
+  </c>
+  <c y="NodeSet" t="2017-06-28T10:03:20">
+    <controller name="Isa" />
+    <insert type="rule">
+      <Type>Sql</Type>
+      <CommandName>Delete</CommandName>
+      <Phase>Before</Phase>
+      <Script>Delete FROM isaContact
+where isaID = @isaID
+</Script>
+    </insert>
+  </c>
+  <c y="NodeSet" t="2017-06-28T10:15:21">
+    <controller name="Isa" />
+    <rule id="r100" />
+    <update>
+      <Script>Delete FROM isaDetail
+where isaID in( @isaID )</Script>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-28T10:15:40">
+    <controller name="Isa" />
+    <rule id="r101" />
+    <update>
+      <Script>Delete FROM isaAttachment
+where isaID in (@isaID)</Script>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-28T10:20:22">
+    <controller name="Isa" />
+    <rule id="r101" />
+    <update>
+      <Script>Delete FROM isaAttachment
+where isaID in (@isaID)</Script>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-28T10:48:17">
+    <controller name="Isa" />
+    <rule id="r101" />
+    <update>
+      <Script>Delete FROM isaAttachment
+where isaID = @isaID</Script>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-28T10:48:31">
+    <controller name="Isa" />
+    <rule id="r100" />
+    <update>
+      <Script>Delete FROM isaDetail
+where isaID = @isaID</Script>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-28T11:11:56">
+    <controller name="Isa" />
+    <rule id="r101" />
+    <delete />
+  </c>
+  <c y="NodeSet" t="2017-06-28T11:12:07">
+    <controller name="Isa" />
+    <rule id="r100" />
+    <update>
+      <Script>Delete FROM isaDetail
+where isaID = @isaID
+
+Delete FROM isaAttachment
+where isaID = @isaID</Script>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-28T11:12:18">
+    <controller name="Isa" />
+    <rule id="r102" />
+    <delete />
+  </c>
+  <c y="NodeSet" t="2017-06-28T11:12:26">
+    <controller name="Isa" />
+    <rule id="r100" />
+    <update>
+      <Script>Delete FROM isaDetail
+where isaID = @isaID
+
+Delete FROM isaAttachment
+where isaID = @isaID
+
+Delete FROM isaContact
+where isaID = @isaID
+</Script>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-28T11:16:53">
+    <controller name="IsaItemMaster" />
+    <insert type="rule">
+      <Type>Sql</Type>
+      <CommandName>Delete</CommandName>
+      <Phase>Before</Phase>
+      <Script>Delete FROM isaDetail
+where isaItemMasterID = @isaItemMasterID</Script>
+    </insert>
+  </c>
+  <c y="NodeSet" t="2017-06-28T11:45:45">
+    <controller name="IsaItemMaster" />
+    <view id="createForm1" />
+    <update>
+      <Label>New Item</Label>
+      <HeaderText />
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-28T11:46:05">
+    <controller name="IsaItemMaster" />
+    <view id="editForm1" />
+    <update>
+      <Label>Review Item</Label>
+      <HeaderText />
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-28T11:56:36">
+    <controller name="IsaItemMaster" />
+    <view id="grid1" />
+    <update>
+      <Label>Items</Label>
+      <HeaderText />
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-28T12:03:33">
+    <controller name="IsaTemplate" />
+    <field name="IsaItemMasterItemDescription" />
+    <update>
+      <Label>Item</Label>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-28T12:03:50">
+    <controller name="IsaTemplate" />
+    <field name="IsaItemMasterisaCategoryMasterCategoryDescription" />
+    <update>
+      <Label>Category</Label>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-28T12:05:07">
+    <controller name="IsaTemplate" />
+    <view id="grid1" />
+    <update>
+      <Label>Template</Label>
+      <HeaderText />
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-28T12:05:21">
+    <controller name="IsaTemplate" />
+    <view id="editForm1" />
+    <update>
+      <Label>Review Template</Label>
+      <HeaderText />
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-28T12:05:36">
+    <controller name="IsaTemplate" />
+    <view id="createForm1" />
+    <update>
+      <Label>New Template</Label>
+      <HeaderText />
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-28T12:07:17">
+    <controller name="IsaTemplate" />
+    <field name="CompanCode" />
+    <insert type="item">
+      <Value>PBS</Value>
+      <Text>PBS</Text>
+    </insert>
+  </c>
+  <c y="NodeSet" t="2017-06-28T12:07:28">
+    <controller name="IsaTemplate" />
+    <field name="CompanCode" />
+    <insert type="item">
+      <Value>PSS</Value>
+      <Text>PSS</Text>
+    </insert>
+  </c>
+  <c y="NodeSet" t="2017-06-28T12:07:40">
+    <controller name="IsaTemplate" />
+    <field name="CompanCode" />
+    <insert type="item">
+      <Value>PLS</Value>
+      <Text>PLS</Text>
+    </insert>
+  </c>
+  <c y="NodeSet" t="2017-06-28T12:08:08">
+    <controller name="IsaTemplate" />
+    <field name="CompanCode" />
+    <update>
+      <ItemsStyle>RadioButtonList</ItemsStyle>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-28T12:33:12">
+    <controller name="IsaContactMaster" />
+    <field name="ContactTypeContactDescription" />
+    <update>
+      <Label>Contact Type</Label>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-28T12:34:36">
+    <controller name="IsaContact" />
+    <field name="TheisaContactTypeContactDescription" />
+    <update>
+      <Label>Contact Type</Label>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-28T12:35:21">
+    <controller name="Isa" />
+    <view id="editForm1" />
+    <category id="c1" />
+    <dataField fieldName="IsaContact" />
+    <after>
+      <controller name="Isa" />
+      <view id="editForm1" />
+      <category id="c1" />
+      <dataField fieldName="IsaAttachment" />
+    </after>
+  </c>
+  <c y="NodeSet" t="2017-06-28T12:35:27">
+    <controller name="Isa" />
+    <view id="createForm1" />
+    <category id="c1" />
+    <dataField fieldName="IsaDetail" />
+    <after>
+      <controller name="Isa" />
+      <view id="createForm1" />
+      <category id="c1" />
+      <dataField fieldName="IsaAttachment" />
+    </after>
+  </c>
+  <c y="NodeSet" t="2017-06-28T12:35:42">
+    <controller name="Isa" />
+    <view id="createForm1" />
+    <category id="c1" />
+    <move>
+      <controller name="Isa" />
+      <field name="IsaContact" />
+    </move>
+  </c>
+  <c y="NodeSet" t="2017-06-28T12:35:46">
+    <controller name="Isa" />
+    <view id="createForm1" />
+    <category id="c1" />
+    <dataField fieldName="IsaDetail" />
+    <after>
+      <controller name="Isa" />
+      <view id="createForm1" />
+      <category id="c1" />
+      <dataField fieldName="IsaContact" />
+    </after>
+  </c>
+  <c y="NodeSet" t="2017-06-29T13:42:53">
+    <controller name="IsaDetailPbs" />
+    <field name="IsaItemMasterisaCategoryMasterCategoryDescription" />
+    <update>
+      <Label>Category</Label>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-29T13:43:05">
+    <controller name="IsaDetailPbs" />
+    <field name="IsaItemMasterItemDescription" />
+    <update>
+      <Label>Item</Label>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-29T13:43:37">
+    <controller name="IsaDetailPbs" />
+    <field name="IsaisaSiteisaPropertyMgmtPropertyMgntName" />
+    <update>
+      <Label>Property Mgnt Name</Label>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-29T13:43:46">
+    <controller name="IsaDetailPbs" />
+    <field name="IsaisaSiteName" />
+    <update>
+      <Label>Site Name</Label>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-29T13:43:53">
+    <controller name="IsaDetailPbs" />
+    <field name="IsaisaCompetitorName" />
+    <update>
+      <Label>Competitor Name</Label>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-29T13:43:59">
+    <controller name="IsaDetailPbs" />
+    <field name="IsaCompanyCode" />
+    <update>
+      <Label>Company Code</Label>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-29T13:44:12">
+    <controller name="IsaDetailPls" />
+    <field name="IsaCompanyCode" />
+    <update>
+      <Label>Company Code</Label>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-29T13:44:19">
+    <controller name="IsaDetailPls" />
+    <field name="IsaisaCompetitorName" />
+    <update>
+      <Label>Competitor Name</Label>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-29T13:44:25">
+    <controller name="IsaDetailPls" />
+    <field name="IsaisaSiteName" />
+    <update>
+      <Label>Site Name</Label>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-29T13:44:35">
+    <controller name="IsaDetailPls" />
+    <field name="IsaisaSiteisaPropertyMgmtPropertyMgntName" />
+    <update>
+      <Label>Property Mgnt Name</Label>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-29T13:44:47">
+    <controller name="IsaDetailPls" />
+    <field name="IsaItemMasterItemDescription" />
+    <update>
+      <Label>Item</Label>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-29T13:44:56">
+    <controller name="IsaDetailPls" />
+    <field name="IsaItemMasterisaCategoryMasterCategoryDescription" />
+    <update>
+      <Label>Category</Label>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-29T13:45:06">
+    <controller name="IsaDetailPss" />
+    <field name="IsaCompanyCode" />
+    <update>
+      <Label>Company Code</Label>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-29T13:45:13">
+    <controller name="IsaDetailPss" />
+    <field name="IsaisaCompetitorName" />
+    <update>
+      <Label>Competitor Name</Label>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-29T13:45:18">
+    <controller name="IsaDetailPss" />
+    <field name="IsaisaSiteName" />
+    <update>
+      <Label>Site Name</Label>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-29T13:45:26">
+    <controller name="IsaDetailPss" />
+    <field name="IsaisaSiteisaPropertyMgmtPropertyMgntName" />
+    <update>
+      <Label>Property Mgnt Name</Label>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-29T13:45:35">
+    <controller name="IsaDetailPss" />
+    <field name="IsaItemMasterItemDescription" />
+    <update>
+      <Label>Item</Label>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-29T13:45:43">
+    <controller name="IsaDetailPss" />
+    <field name="IsaItemMasterisaCategoryMasterCategoryDescription" />
+    <update>
+      <Label>Category</Label>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-29T13:46:16">
+    <controller name="Isa" />
+    <move>
+      <controller name="IsaDetailPbs" />
+    </move>
+  </c>
+  <c y="NodeSet" t="2017-06-29T13:46:20">
+    <controller name="Isa" />
+    <move>
+      <controller name="IsaDetailPls" />
+    </move>
+  </c>
+  <c y="NodeSet" t="2017-06-29T13:46:24">
+    <controller name="Isa" />
+    <move>
+      <controller name="IsaDetailPss" />
+    </move>
+  </c>
+  <c y="NodeSet" t="2017-06-29T13:46:45">
+    <controller name="Isa" />
+    <field name="IsaDetailPss" />
+    <update>
+      <Label>PSS</Label>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-29T13:46:54">
+    <controller name="Isa" />
+    <field name="IsaDetailPls" />
+    <update>
+      <Label>PLS</Label>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-29T13:47:03">
+    <controller name="Isa" />
+    <field name="IsaDetailPbs" />
+    <update>
+      <Label>PBS</Label>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-29T13:47:18">
+    <controller name="Isa" />
+    <view id="editForm1" />
+    <category id="c1" />
+    <move>
+      <controller name="Isa" />
+      <field name="IsaDetailPbs" />
+    </move>
+  </c>
+  <c y="NodeSet" t="2017-06-29T13:47:18">
+    <controller name="Isa" />
+    <view id="editForm1" />
+    <category id="c1" />
+    <move>
+      <controller name="Isa" />
+      <field name="IsaDetailPls" />
+    </move>
+  </c>
+  <c y="NodeSet" t="2017-06-29T13:47:18">
+    <controller name="Isa" />
+    <view id="editForm1" />
+    <category id="c1" />
+    <move>
+      <controller name="Isa" />
+      <field name="IsaDetailPss" />
+    </move>
+  </c>
+  <c y="NodeSet" t="2017-06-29T13:47:30">
+    <controller name="Isa" />
+    <view id="createForm1" />
+    <category id="c1" />
+    <move>
+      <controller name="Isa" />
+      <field name="IsaDetailPbs" />
+    </move>
+  </c>
+  <c y="NodeSet" t="2017-06-29T13:47:30">
+    <controller name="Isa" />
+    <view id="createForm1" />
+    <category id="c1" />
+    <move>
+      <controller name="Isa" />
+      <field name="IsaDetailPls" />
+    </move>
+  </c>
+  <c y="NodeSet" t="2017-06-29T13:47:30">
+    <controller name="Isa" />
+    <view id="createForm1" />
+    <category id="c1" />
+    <move>
+      <controller name="Isa" />
+      <field name="IsaDetailPss" />
+    </move>
+  </c>
+  <c y="NodeSet" t="2017-06-29T13:47:42">
+    <controller name="Isa" />
+    <view id="createForm1" />
+    <category id="c1" />
+    <dataField fieldName="IsaDetail" />
+    <delete />
+  </c>
+  <c y="NodeSet" t="2017-06-29T13:47:47">
+    <controller name="Isa" />
+    <view id="editForm1" />
+    <category id="c1" />
+    <dataField fieldName="IsaDetail" />
+    <delete />
+  </c>
+  <c y="NodeSet" t="2017-06-29T13:48:29">
+    <controller name="Isa" />
+    <view id="createForm1" />
+    <insert type="category">
+      <HeaderText>PBS</HeaderText>
+      <Tab>PBS</Tab>
+    </insert>
+  </c>
+  <c y="NodeSet" t="2017-06-29T13:48:41">
+    <controller name="Isa" />
+    <view id="createForm1" />
+    <category id="c2" />
+    <update>
+      <HeaderText>Details</HeaderText>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-29T13:49:00">
+    <controller name="Isa" />
+    <view id="createForm1" />
+    <category id="c2" />
+    <move>
+      <controller name="Isa" />
+      <view id="createForm1" />
+      <category id="c1" />
+      <dataField fieldName="IsaDetailPbs" />
+    </move>
+  </c>
+  <c y="NodeSet" t="2017-06-29T13:49:41">
+    <controller name="Isa" />
+    <view id="createForm1" />
+    <insert type="category">
+      <HeaderText>Details</HeaderText>
+      <Tab>PLS</Tab>
+    </insert>
+  </c>
+  <c y="NodeSet" t="2017-06-29T13:49:51">
+    <controller name="Isa" />
+    <view id="createForm1" />
+    <category id="c3" />
+    <move>
+      <controller name="Isa" />
+      <view id="createForm1" />
+      <category id="c1" />
+      <dataField fieldName="IsaDetailPls" />
+    </move>
+  </c>
+  <c y="NodeSet" t="2017-06-29T13:50:06">
+    <controller name="Isa" />
+    <view id="createForm1" />
+    <insert type="category">
+      <HeaderText>Details</HeaderText>
+      <Tab>PSS</Tab>
+    </insert>
+  </c>
+  <c y="NodeSet" t="2017-06-29T13:50:10">
+    <controller name="Isa" />
+    <view id="createForm1" />
+    <category id="c4" />
+    <move>
+      <controller name="Isa" />
+      <view id="createForm1" />
+      <category id="c1" />
+      <dataField fieldName="IsaDetailPss" />
+    </move>
+  </c>
+  <c y="NodeSet" t="2017-06-29T13:52:43">
+    <controller name="Isa" />
+    <view id="createForm1" />
+    <category id="c2" />
+    <move>
+      <controller name="Isa" />
+      <view id="createForm1" />
+      <category id="c3" />
+      <dataField fieldName="IsaDetailPls" />
+    </move>
+  </c>
+  <c y="NodeSet" t="2017-06-29T13:52:46">
+    <controller name="Isa" />
+    <view id="createForm1" />
+    <category id="c2" />
+    <move>
+      <controller name="Isa" />
+      <view id="createForm1" />
+      <category id="c4" />
+      <dataField fieldName="IsaDetailPss" />
+    </move>
+  </c>
+  <c y="NodeSet" t="2017-06-29T13:52:52">
+    <controller name="Isa" />
+    <view id="createForm1" />
+    <category id="c3" />
+    <delete />
+  </c>
+  <c y="NodeSet" t="2017-06-29T13:52:56">
+    <controller name="Isa" />
+    <view id="createForm1" />
+    <category id="c4" />
+    <delete />
+  </c>
+  <c y="NodeSet" t="2017-06-29T13:53:05">
+    <controller name="Isa" />
+    <view id="createForm1" />
+    <category id="c2" />
+    <update>
+      <Tab />
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-29T13:57:31">
+    <controller name="Isa" />
+    <view id="createForm1" />
+    <category id="c2" />
+    <update>
+      <Flow>NewRow</Flow>
+      <Tab>PBS</Tab>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-29T13:57:58">
+    <controller name="Isa" />
+    <view id="createForm1" />
+    <insert type="category">
+      <Tab>PLS</Tab>
+    </insert>
+  </c>
+  <c y="NodeSet" t="2017-06-29T13:58:06">
+    <controller name="Isa" />
+    <view id="createForm1" />
+    <category id="c3" />
+    <move>
+      <controller name="Isa" />
+      <view id="createForm1" />
+      <category id="c2" />
+      <dataField fieldName="IsaDetailPls" />
+    </move>
+  </c>
+  <c y="NodeSet" t="2017-06-29T13:58:17">
+    <controller name="Isa" />
+    <view id="createForm1" />
+    <insert type="category">
+      <Tab>PSS</Tab>
+    </insert>
+  </c>
+  <c y="NodeSet" t="2017-06-29T13:58:20">
+    <controller name="Isa" />
+    <view id="createForm1" />
+    <category id="c4" />
+    <move>
+      <controller name="Isa" />
+      <view id="createForm1" />
+      <category id="c2" />
+      <dataField fieldName="IsaDetailPss" />
+    </move>
+  </c>
+  <c y="NodeSet" t="2017-06-29T14:00:14">
+    <controller name="Isa" />
+    <view id="editForm1" />
+    <category id="c1" />
+    <dataField fieldName="IsaDetailPbs" />
+    <delete />
+  </c>
+  <c y="NodeSet" t="2017-06-29T14:00:14">
+    <controller name="Isa" />
+    <view id="editForm1" />
+    <category id="c1" />
+    <dataField fieldName="IsaDetailPls" />
+    <delete />
+  </c>
+  <c y="NodeSet" t="2017-06-29T14:00:14">
+    <controller name="Isa" />
+    <view id="editForm1" />
+    <category id="c1" />
+    <dataField fieldName="IsaDetailPss" />
+    <delete />
+  </c>
+  <c y="NodeSet" t="2017-06-29T14:00:21">
+    <controller name="Isa" />
+    <view id="editForm1" />
+    <category id="c1" />
+    <move>
+      <controller name="Isa" />
+      <view id="createForm1" />
+      <category id="c4" />
+    </move>
+  </c>
+  <c y="NodeSet" t="2017-06-29T14:00:21">
+    <controller name="Isa" />
+    <view id="editForm1" />
+    <category id="c1" />
+    <move>
+      <controller name="Isa" />
+      <view id="createForm1" />
+      <category id="c3" />
+    </move>
+  </c>
+  <c y="NodeSet" t="2017-06-29T14:00:21">
+    <controller name="Isa" />
+    <view id="editForm1" />
+    <category id="c1" />
+    <move>
+      <controller name="Isa" />
+      <view id="createForm1" />
+      <category id="c2" />
+    </move>
+  </c>
+  <c y="NodeSet" t="2017-06-29T14:01:23">
+    <controller name="Isa" />
+    <view id="editForm1" />
+    <insert type="category">
+      <Flow>NewRow</Flow>
+      <Tab>Contacts</Tab>
+    </insert>
+  </c>
+  <c y="NodeSet" t="2017-06-29T14:01:36">
+    <controller name="Isa" />
+    <view id="editForm1" />
+    <category id="c5" />
+    <move>
+      <controller name="Isa" />
+      <view id="editForm1" />
+      <category id="c1" />
+      <dataField fieldName="IsaContact" />
+    </move>
+  </c>
+  <c y="NodeSet" t="2017-06-29T14:02:00">
+    <controller name="Isa" />
+    <view id="editForm1" />
+    <insert type="category">
+      <Tab>Attachments</Tab>
+    </insert>
+  </c>
+  <c y="NodeSet" t="2017-06-29T14:02:03">
+    <controller name="Isa" />
+    <view id="editForm1" />
+    <category id="c6" />
+    <move>
+      <controller name="Isa" />
+      <view id="editForm1" />
+      <category id="c1" />
+      <dataField fieldName="IsaAttachment" />
+    </move>
+  </c>
+  <c y="NodeSet" t="2017-06-29T14:03:43">
+    <controller name="Isa" />
+    <view id="createForm1" />
+    <category id="c1" />
+    <dataField fieldName="IsaContact" />
+    <delete />
+  </c>
+  <c y="NodeSet" t="2017-06-29T14:03:43">
+    <controller name="Isa" />
+    <view id="createForm1" />
+    <category id="c1" />
+    <dataField fieldName="IsaAttachment" />
+    <delete />
+  </c>
+  <c y="NodeSet" t="2017-06-29T14:03:46">
+    <controller name="Isa" />
+    <view id="createForm1" />
+    <move>
+      <controller name="Isa" />
+      <view id="editForm1" />
+      <category id="c5" />
+    </move>
+  </c>
+  <c y="NodeSet" t="2017-06-29T14:03:46">
+    <controller name="Isa" />
+    <view id="createForm1" />
+    <move>
+      <controller name="Isa" />
+      <view id="editForm1" />
+      <category id="c6" />
+    </move>
+  </c>
+  <c y="NodeSet" t="2017-06-29T14:10:00">
+    <controller name="IsaDetailPbs" />
+    <view id="grid1" />
+    <update>
+      <Label>Details</Label>
+      <HeaderText />
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-29T14:10:28">
+    <controller name="IsaDetailPbs" />
+    <view id="editForm1" />
+    <update>
+      <Label>Review Detail (PBS)</Label>
+      <HeaderText />
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-29T14:11:12">
+    <controller name="IsaDetailPbs" />
+    <view id="createForm1" />
+    <update>
+      <Label>New Detail (PBS)</Label>
+      <HeaderText />
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-29T14:11:56">
+    <controller name="IsaDetailPls" />
+    <view id="grid1" />
+    <update>
+      <Label>Details (PLS)</Label>
+      <HeaderText />
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-29T14:12:16">
+    <controller name="IsaDetailPls" />
+    <view id="editForm1" />
+    <update>
+      <Label>Review Detail (PLS)</Label>
+      <HeaderText />
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-29T14:12:33">
+    <controller name="IsaDetailPls" />
+    <view id="createForm1" />
+    <update>
+      <Label>New Detail (PLS)</Label>
+      <HeaderText />
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-29T14:12:57">
+    <controller name="IsaDetailPss" />
+    <view id="grid1" />
+    <update>
+      <Label>Details (PSS)</Label>
+      <HeaderText />
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-29T14:13:31">
+    <controller name="IsaDetailPss" />
+    <view id="editForm1" />
+    <update>
+      <Label>Review Detail (PSS)</Label>
+      <HeaderText />
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-29T14:13:46">
+    <controller name="IsaDetailPss" />
+    <view id="createForm1" />
+    <update>
+      <Label>New Detail (PSS)</Label>
+      <HeaderText />
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-29T14:23:48">
+    <controller name="IsaDetailPbs" />
+    <view id="grid1" />
+    <update>
+      <Label>Details (PBS)</Label>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-29T15:01:24">
+    <controller name="IsaDetailPbs" />
+    <field name="IsaID" />
+    <update>
+      <ContextFields>CompanyCode = 'PBS'</ContextFields>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-29T15:02:02">
+    <controller name="IsaDetailPls" />
+    <field name="IsaID" />
+    <update>
+      <ContextFields>CompanyCode = 'PLS'</ContextFields>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-29T15:02:49">
+    <controller name="IsaDetailPls" />
+    <field name="IsaID" />
+    <update>
+      <ContextFields />
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-29T15:03:05">
+    <controller name="IsaDetailPbs" />
+    <field name="IsaID" />
+    <update>
+      <ContextFields />
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-29T15:23:34">
+    <controller name="IsaDetailPls" />
+    <field name="IsaCompanyCode" />
+    <update>
+      <ContextFields>CompanyCode = 'PLS'</ContextFields>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-29T15:23:48">
+    <controller name="IsaDetailPbs" />
+    <field name="IsaCompanyCode" />
+    <update>
+      <ContextFields>CompanyCode = 'PLS'</ContextFields>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-29T15:23:57">
+    <controller name="IsaDetailPbs" />
+    <field name="IsaCompanyCode" />
+    <update>
+      <ContextFields>CompanyCode = 'PBS'</ContextFields>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-29T15:26:48">
+    <controller name="IsaItemMaster" />
+    <view id="grid1" />
+    <update>
+      <FilterExpression>isaCategoryMasterCompanyCode = @ContextFields_CompanyCode</FilterExpression>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-29T15:32:15">
+    <controller name="IsaDetailPbs" />
+    <field name="IsaCompanyCode" />
+    <update>
+      <ContextFields />
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-29T15:32:28">
+    <controller name="IsaDetailPbs" />
+    <field name="IsaItemMasterID" />
+    <update>
+      <ContextFields>CompanyCode = 'PBS'</ContextFields>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-29T15:32:40">
+    <controller name="IsaDetailPls" />
+    <field name="IsaCompanyCode" />
+    <update>
+      <ContextFields />
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-29T15:32:51">
+    <controller name="IsaDetailPls" />
+    <field name="IsaItemMasterID" />
+    <update>
+      <ContextFields>CompanyCode = 'PLS'</ContextFields>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-29T15:34:25">
+    <controller name="IsaDetailPss" />
+    <field name="IsaItemMasterID" />
+    <update>
+      <ContextFields>CompanyCode = 'PSS'</ContextFields>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-29T15:40:41">
+    <controller name="IsaItemMaster" />
+    <field name="IsaCategoryMasterID" />
+    <update>
+      <ContextFields>CompanyCode = IsaCategoryMasterCompanyCode</ContextFields>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-29T15:41:27">
+    <controller name="IsaCategoryMaster" />
+    <view id="grid1" />
+    <update>
+      <FilterExpression>CompanyCode = @ContextFields_CompanyCode</FilterExpression>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-29T15:51:49">
+    <controller name="IsaCategoryMaster" />
+    <view id="grid1" />
+    <update>
+      <FilterExpression />
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-29T15:53:21">
+    <controller name="IsaItemMaster" />
+    <field name="IsaCategoryMasterID" />
+    <update>
+      <ContextFields />
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-29T15:57:03">
+    <controller name="IsaItemMaster" />
+    <field name="IsaCategoryMasterID" />
+    <update>
+      <ContextFields>ItemCompanyCode = isaCategoryMasterCompanyCode</ContextFields>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-29T15:58:01">
+    <controller name="IsaCategoryMaster" />
+    <view id="grid1" />
+    <update>
+      <FilterExpression>CompanyCode = @ContextFields_ItemCompanyCode</FilterExpression>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-29T15:59:56">
+    <controller name="IsaCategoryMaster" />
+    <view id="grid1" />
+    <update>
+      <FilterExpression>CompanyCode = 'PBS'</FilterExpression>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-29T16:00:37">
+    <controller name="IsaCategoryMaster" />
+    <view id="grid1" />
+    <update>
+      <FilterExpression>CompanyCode = @ContextFields_ItemCompanyCode</FilterExpression>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-29T16:01:09">
+    <controller name="IsaItemMaster" />
+    <field name="IsaItemMasterID" />
+    <update>
+      <ContextFields>ItemCompanyCode = isaCategoryMasterCompanyCode</ContextFields>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-29T16:05:26">
+    <controller name="IsaItemMaster" />
+    <field name="IsaCategoryMasterID" />
+    <update>
+      <ContextFields>ItemCompanyCode = @CompanyCode</ContextFields>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-29T16:06:01">
+    <controller name="IsaItemMaster" />
+    <field name="IsaCategoryMasterID" />
+    <update>
+      <ContextFields>ItemCompanyCode = @ContextFields_CompanyCode</ContextFields>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-29T16:07:08">
+    <controller name="IsaItemMaster" />
+    <field name="IsaItemMasterID" />
+    <update>
+      <ContextFields>ItemCompanyCode = @ContextFields_CompanyCode</ContextFields>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-29T16:10:37">
+    <controller name="IsaCategoryMaster" />
+    <view id="grid1" />
+    <update>
+      <FilterExpression />
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-30T09:36:08">
+    <controller name="IsaDetailPbs" />
+    <field name="IsaCompanyCode" />
+    <update>
+      <ContextFields>CompanyCode = 'PBS'</ContextFields>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-30T09:37:14">
+    <controller name="IsaCategoryMaster" />
+    <view id="grid1" />
+    <update>
+      <FilterExpression>CompanyCode = @ContextFields_CompanyCode</FilterExpression>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-30T09:38:31">
+    <controller name="IsaItemMaster" />
+    <field name="IsaCategoryMasterCompanyCode" />
+    <update>
+      <Label>Company Code</Label>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-30T09:39:30">
+    <controller name="IsaItemMaster" />
+    <field name="IsaCategoryMasterID" />
+    <update>
+      <Label>Category Master ID</Label>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-30T09:40:03">
+    <controller name="IsaItemMaster" />
+    <field name="IsaCategoryMasterID" />
+    <update>
+      <ContextFields>CompanyCode = @ContextFields_CompanyCode</ContextFields>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-30T09:41:43">
+    <controller name="IsaItemMaster" />
+    <field name="IsaCategoryMasterCompanyCode" />
+    <update>
+      <ContextFields>CompanyCode = @ContextFields_CompanyCode</ContextFields>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-30T09:44:08">
+    <controller name="IsaItemMaster" />
+    <field name="IsaItemMasterID" />
+    <update>
+      <ContextFields>CompanyCode = @ContextFields_CompanyCode</ContextFields>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-30T09:44:25">
+    <controller name="IsaItemMaster" />
+    <field name="IsaCategoryMasterCategoryDescription" />
+    <update>
+      <ContextFields>CompanyCode = @ContextFields_CompanyCode</ContextFields>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-30T09:44:37">
+    <controller name="IsaItemMaster" />
+    <field name="ItemDescription" />
+    <update>
+      <ContextFields>CompanyCode = @ContextFields_CompanyCode</ContextFields>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-30T09:49:05">
+    <controller name="IsaItemMaster" />
+    <field name="IsaCategoryMasterCompanyCode" />
+    <update>
+      <ContextFields>CompanyCode = @ContextFields_CompanyCod</ContextFields>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-30T09:50:29">
+    <controller name="IsaItemMaster" />
+    <field name="IsaCategoryMasterCompanyCode" />
+    <update>
+      <ContextFields>CompanyCode = @ContextFields_CompanyCode</ContextFields>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-30T09:50:49">
+    <controller name="IsaItemMaster" />
+    <view id="createForm1" />
+    <update>
+      <FilterExpression>isaCategoryMasterCompanyCode = @ContextFields_CompanyCode</FilterExpression>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-30T09:51:39">
+    <controller name="IsaItemMaster" />
+    <view id="createForm1" />
+    <update>
+      <FilterExpression>CompanyCode = @ContextFields_CompanyCode</FilterExpression>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-30T09:52:16">
+    <controller name="IsaItemMaster" />
+    <view id="createForm1" />
+    <update>
+      <FilterExpression />
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-30T09:53:13">
+    <controller name="IsaItemMaster" />
+    <field name="IsaItemMasterID" />
+    <update>
+      <ContextFields>CompanyCode = 'PLS'</ContextFields>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-30T09:53:23">
+    <controller name="IsaItemMaster" />
+    <field name="IsaCategoryMasterID" />
+    <update>
+      <ContextFields>CompanyCode = 'PLS'</ContextFields>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-30T09:53:31">
+    <controller name="IsaItemMaster" />
+    <field name="IsaCategoryMasterCategoryDescription" />
+    <update>
+      <ContextFields>CompanyCode = 'PLS'</ContextFields>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-30T09:53:39">
+    <controller name="IsaItemMaster" />
+    <field name="IsaCategoryMasterCompanyCode" />
+    <update>
+      <ContextFields>CompanyCode = 'PLS'</ContextFields>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-30T09:53:47">
+    <controller name="IsaItemMaster" />
+    <field name="ItemDescription" />
+    <update>
+      <ContextFields>CompanyCode = 'PLS'</ContextFields>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-30T09:54:53">
+    <controller name="IsaItemMaster" />
+    <field name="ItemDescription" />
+    <update>
+      <ContextFields />
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-30T09:55:20">
+    <controller name="IsaItemMaster" />
+    <field name="IsaItemMasterID" />
+    <update>
+      <ContextFields />
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-30T09:55:27">
+    <controller name="IsaItemMaster" />
+    <field name="IsaCategoryMasterCategoryDescription" />
+    <update>
+      <ContextFields />
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-30T09:55:37">
+    <controller name="IsaItemMaster" />
+    <field name="IsaCategoryMasterCompanyCode" />
+    <update>
+      <ContextFields />
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-30T09:57:28">
+    <controller name="IsaItemMaster" />
+    <field name="IsaCategoryMasterID" />
+    <update>
+      <ContextFields>CompanyCode = isaCompanyCode</ContextFields>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-30T10:00:35">
+    <controller name="IsaItemMaster" />
+    <field name="IsaCategoryMasterID" />
+    <update>
+      <ContextFields>CompanyCode =@ContextFields_CompanyCode</ContextFields>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-30T10:03:27">
+    <controller name="IsaItemMaster" />
+    <field name="IsaCategoryMasterID" />
+    <update>
+      <ContextFields>CompanyCode =@CompanyCode</ContextFields>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-30T10:05:27">
+    <controller name="IsaItemMaster" />
+    <field name="IsaCategoryMasterID" />
+    <update>
+      <ContextFields />
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-30T10:06:13">
+    <controller name="IsaItemMaster" />
+    <field name="IsaCategoryMasterID" />
+    <update>
+      <ContextFields>CompanyCode = 'PBS'</ContextFields>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-30T10:25:14">
+    <controller name="IsaItemMaster" />
+    <field name="IsaCategoryMasterID" />
+    <update>
+      <ContextFields>CompanyCode = SelectExternalFilterFieldValueObject("CompanyCode")</ContextFields>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-06-30T10:26:03">
+    <controller name="IsaItemMaster" />
+    <field name="IsaCategoryMasterID" />
+    <update>
+      <ContextFields>CompanyCode = 'PBS'</ContextFields>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-07-10T13:23:24">
+    <controller name="IsaItemMaster" />
+    <move>
+      <controller name="IsaItemMaster" />
+      <view id="createForm1" />
+    </move>
+  </c>
+  <c y="NodeSet" t="2017-07-10T13:23:31">
+    <controller name="IsaItemMaster" />
+    <copy>
+      <controller name="IsaItemMaster" />
+      <view id="createForm1" />
+    </copy>
+  </c>
+  <c y="NodeSet" t="2017-07-10T13:24:00">
+    <controller name="IsaItemMaster" />
+    <view id="v100" />
+    <rename>createFormPBS</rename>
+  </c>
+  <c y="NodeSet" t="2017-07-10T13:25:09">
+    <controller name="IsaItemMaster" />
+    <insert type="field">
+      <Name>CategoryFilter</Name>
+      <Type>String</Type>
+      <AllowNulls>true</AllowNulls>
+      <IsPrimaryKey>false</IsPrimaryKey>
+      <IsVirtual>true</IsVirtual>
+      <Computed>false</Computed>
+      <Calculated>false</Calculated>
+      <CausesCalculate>false</CausesCalculate>
+      <OnDemand>false</OnDemand>
+      <Label>Category Filter</Label>
+      <ReadOnly>false</ReadOnly>
+      <ShowInSummary>false</ShowInSummary>
+      <HtmlEncode>true</HtmlEncode>
+      <FormatOnClient>true</FormatOnClient>
+      <SearchOnStart>false</SearchOnStart>
+      <AutoSelect>false</AutoSelect>
+      <ItemsLetters>false</ItemsLetters>
+      <AllowQBE>true</AllowQBE>
+      <AllowSorting>true</AllowSorting>
+      <MaskType>None</MaskType>
+      <AllowLEV>false</AllowLEV>
+    </insert>
+  </c>
+  <c y="NodeSet" t="2017-07-10T13:25:13">
+    <controller name="IsaItemMaster" />
+    <view id="createFormPBS" />
+    <move>
+      <controller name="IsaItemMaster" />
+      <field name="CategoryFilter" />
+    </move>
+  </c>
+  <c y="NodeSet" t="2017-07-10T13:25:17">
+    <controller name="IsaItemMaster" />
+    <view id="createForm1" />
+    <move>
+      <controller name="IsaItemMaster" />
+      <field name="CategoryFilter" />
+    </move>
+  </c>
+  <c y="NodeSet" t="2017-07-10T13:26:16">
+    <controller name="IsaItemMaster" />
+    <field name="IsaCategoryMasterID" />
+    <update>
+      <ContextFields>CompanyCode = CategoryFilter</ContextFields>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-07-10T13:26:38">
+    <controller name="IsaItemMaster" />
+    <insert type="rule">
+      <Type>Sql</Type>
+      <CommandName>New</CommandName>
+      <View>createFormPBS</View>
+      <Phase>Execute</Phase>
+      <Script>set @CategoryFilter = 'PBS'</Script>
+    </insert>
+  </c>
+  <c y="NodeSet" t="2017-07-10T13:27:07">
+    <controller name="IsaDetailPbs" />
+    <field name="IsaItemMasterID" />
+    <update>
+      <ItemsNewDataView>createFormPBS</ItemsNewDataView>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-07-10T13:29:06">
+    <controller name="IsaItemMaster" />
+    <field name="CategoryFilter" />
+    <delete />
+  </c>
+  <c y="NodeSet" t="2017-07-10T13:29:11">
+    <controller name="IsaItemMaster" />
+    <rule id="r101" />
+    <delete />
+  </c>
+  <c y="NodeSet" t="2017-07-10T13:30:09">
+    <controller name="IsaItemMaster" />
+    <field name="IsaCategoryMasterID" />
+    <update>
+      <ContextFields>CompanyFilter = IsaCategoryMasterCompanyCode</ContextFields>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-07-10T13:34:20">
+    <controller name="IsaDetailPbs" />
+    <field name="IsaItemMasterID" />
+    <update>
+      <ItemsNewDataView>createForm1</ItemsNewDataView>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-07-10T13:38:34">
+    <controller name="IsaItemMaster" />
+    <insert type="field">
+      <Name>CompanyCodeFilter</Name>
+      <Type>String</Type>
+      <AllowNulls>true</AllowNulls>
+      <IsPrimaryKey>false</IsPrimaryKey>
+      <IsVirtual>true</IsVirtual>
+      <Computed>false</Computed>
+      <Calculated>false</Calculated>
+      <CausesCalculate>false</CausesCalculate>
+      <OnDemand>false</OnDemand>
+      <Label>Company Code Filter</Label>
+      <ReadOnly>false</ReadOnly>
+      <ShowInSummary>false</ShowInSummary>
+      <HtmlEncode>true</HtmlEncode>
+      <FormatOnClient>true</FormatOnClient>
+      <SearchOnStart>false</SearchOnStart>
+      <AutoSelect>false</AutoSelect>
+      <ItemsLetters>false</ItemsLetters>
+      <AllowQBE>true</AllowQBE>
+      <AllowSorting>true</AllowSorting>
+      <MaskType>None</MaskType>
+      <AllowLEV>false</AllowLEV>
+    </insert>
+  </c>
+  <c y="NodeSet" t="2017-07-10T13:38:41">
+    <controller name="IsaItemMaster" />
+    <view id="createForm1" />
+    <move>
+      <controller name="IsaItemMaster" />
+      <field name="CompanyCodeFilter" />
+    </move>
+  </c>
+  <c y="NodeSet" t="2017-07-10T13:39:33">
+    <controller name="IsaItemMaster" />
+    <insert type="rule">
+      <Type>Sql</Type>
+      <CommandName>New</CommandName>
+      <Phase>Execute</Phase>
+      <Script>if (@ContextFields_CompanyCode is not null)
+    set @CompanyCodeFilter = @ContextFields_CompanyCode</Script>
+    </insert>
+  </c>
+  <c y="NodeSet" t="2017-07-10T13:42:33">
+    <controller name="Isa" />
+    <insert type="rule">
+      <Type>Sql</Type>
+      <CommandName>Select</CommandName>
+      <View>editForm1</View>
+      <Phase>Execute</Phase>
+      <Script>set @Session_CompanyCode = @CompanyCode</Script>
+    </insert>
+  </c>
+  <c y="NodeSet" t="2017-07-10T13:46:30">
+    <controller name="IsaItemMaster" />
+    <rule id="r101" />
+    <update>
+      <Script>if (@ContextFields_CompanyCode is not null)
+    set @CompanyCodeFilter = @Session_ComnpanyCode</Script>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-07-10T13:47:10">
+    <controller name="IsaDetailPbs" />
+    <field name="IsaItemMasterID" />
+    <update>
+      <ContextFields />
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-07-10T13:47:57">
+    <controller name="IsaItemMaster" />
+    <rule id="r101" />
+    <update>
+      <Script>if (@Session_CompanyCode is not null)
+    set @CompanyCodeFilter = @Session_ComnpanyCode</Script>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-07-10T13:48:06">
+    <controller name="IsaItemMaster" />
+    <rule id="r101" />
+    <update>
+      <Script>if (@Session_CompanyCode is not null)
+    set @CompanyCodeFilter = @Session_CompanyCode</Script>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-07-10T13:51:03">
+    <controller name="Isa" />
+    <rule id="r101" />
+    <update>
+      <Script>set @Session_CompanyCode = @CompanyCode
+set @Result_ShowAlert = 'Session var is ' + @Session_CompanyCode</Script>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-07-10T13:52:26">
+    <controller name="IsaItemMaster" />
+    <rule id="r101" />
+    <update>
+      <Script>set @Result_ShowAlert = 'var is ' + @Session_CompanyCode
+if (@Session_CompanyCode is not null)
+    set @CompanyCodeFilter = @Session_CompanyCode</Script>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-07-10T13:54:38">
+    <controller name="IsaCategoryMaster" />
+    <view id="grid1" />
+    <update>
+      <FilterExpression>@Session_CompanyCode is null or CompanyCode =@Session_CompanyCode</FilterExpression>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-07-11T13:03:17">
+    <controller name="Isa" />
+    <actionGroup id="ag1" />
+    <action id="a1" />
+    <before>
+      <controller name="Isa" />
+      <actionGroup id="ag1" />
+      <action id="a2" />
+    </before>
+  </c>
+  <c y="NodeSet" t="2017-07-11T13:04:03">
+    <controller name="Isa" />
+    <actionGroup id="ag1" />
+    <action id="a2" />
+    <update>
+      <CommandArgument>editForm1</CommandArgument>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-07-13T13:16:13">
+    <controller name="Isa" />
+    <rule id="r101" />
+    <update>
+      <Script>set @Session_CompanyCode = @CompanyCode</Script>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-07-13T13:22:24">
+    <controller name="IsaDetailPls" />
+    <field name="IsaCompanyCode" />
+    <update>
+      <ContextFields>CompanyCode = 'PLS'</ContextFields>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-07-13T13:23:54">
+    <controller name="IsaDetailPss" />
+    <field name="IsaCompanyCode" />
+    <update>
+      <ContextFields>CompanyCode = 'PSS'</ContextFields>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-07-13T13:27:11">
+    <controller name="IsaDetailPbs" />
+    <insert type="rule">
+      <Type>Sql</Type>
+      <CommandName>New</CommandName>
+      <Phase>Execute</Phase>
+      <Script>set @Session_CompanyCode = 'PBS'
+set @Result_ShowAlert = 'Session var is ' + @Session_CompanyCode</Script>
+    </insert>
+  </c>
+  <c y="NodeSet" t="2017-07-13T13:27:42">
+    <controller name="IsaDetailPls" />
+    <insert type="rule">
+      <Type>Sql</Type>
+      <CommandName>New</CommandName>
+      <Phase>Execute</Phase>
+      <Script>set @Session_CompanyCode = 'PLS'
+set @Result_ShowAlert = 'Session var is ' + @Session_CompanyCode</Script>
+    </insert>
+  </c>
+  <c y="NodeSet" t="2017-07-13T13:28:36">
+    <controller name="IsaDetailPss" />
+    <insert type="rule">
+      <Type>Sql</Type>
+      <CommandName>New</CommandName>
+      <Phase>Execute</Phase>
+      <Script>set @Session_CompanyCode = 'PSS'
+set @Result_ShowAlert = 'Session var is ' + @Session_CompanyCode</Script>
+    </insert>
+  </c>
+  <c y="NodeSet" t="2017-07-13T13:36:10">
+    <controller name="IsaItemMaster" />
+    <view id="grid1" />
+    <update>
+      <FilterExpression>isaCategoryMasterCompanyCode = @Session_CompanyCode</FilterExpression>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-07-13T13:40:44">
+    <controller name="IsaDetailPbs" />
+    <rule id="r100" />
+    <update>
+      <Script>set @Session_CompanyCode = 'PBS'</Script>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-07-13T13:40:51">
+    <controller name="IsaDetailPls" />
+    <rule id="r100" />
+    <update>
+      <Script>set @Session_CompanyCode = 'PLS'</Script>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-07-13T13:40:56">
+    <controller name="IsaDetailPss" />
+    <rule id="r100" />
+    <update>
+      <Script>set @Session_CompanyCode = 'PSS'</Script>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-07-13T13:41:24">
+    <controller name="IsaItemMaster" />
+    <rule id="r101" />
+    <update>
+      <Script>if (@Session_CompanyCode is not null)
+    set @CompanyCodeFilter = @Session_CompanyCode</Script>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-07-13T13:46:48">
+    <controller name="IsaItemMaster" />
+    <view id="createFormPBS" />
+    <category id="c1" />
+    <copy>
+      <controller name="IsaItemMaster" />
+      <view id="createForm1" />
+      <category id="c1" />
+      <dataField fieldName="CompanyCodeFilter" />
+    </copy>
+  </c>
+  <c y="NodeSet" t="2017-07-13T14:02:25">
+    <controller name="IsaItemMaster" />
+    <view id="grid1" />
+    <update>
+      <FilterExpression>isaCategoryMasterCompanyCode = @ContextFields_CompanyCode</FilterExpression>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-07-13T14:04:26">
+    <controller name="IsaItemMaster" />
+    <view id="grid1" />
+    <update>
+      <FilterExpression>IsaCategoryMasterCompanyCode = @ContextFields_CompanyCode</FilterExpression>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-07-13T14:06:17">
+    <controller name="IsaItemMaster" />
+    <view id="grid1" />
+    <update>
+      <FilterExpression>IsaCategoryMasterCompanyCode = @Session_CompanyCode</FilterExpression>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-07-13T14:07:53">
+    <controller name="IsaDetailPls" />
+    <rule id="r100" />
+    <update>
+      <Phase>Before</Phase>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-07-13T14:08:03">
+    <controller name="IsaDetailPss" />
+    <rule id="r100" />
+    <update>
+      <Phase>Before</Phase>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-07-13T14:08:19">
+    <controller name="IsaDetailPbs" />
+    <rule id="r100" />
+    <update>
+      <Phase>Before</Phase>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-07-13T14:11:09">
+    <controller name="Isa" />
+    <rule id="r101" />
+    <update>
+      <Script>set @Result_ShowAlert = 'Session var is ' + @CompanyCode</Script>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-07-13T14:12:25">
+    <controller name="Isa" />
+    <rule id="r101" />
+    <update>
+      <Script>set @Session_CompanyCode = @CompanyCode
+set @Result_ShowAlert = 'Session var is ' + @Session_CompanyCode</Script>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-07-13T14:15:18">
+    <controller name="IsaDetailPls" />
+    <rule id="r100" />
+    <update>
+      <Script>set @Session_CompanyCode = 'PLS'
+set @Result_ShowAlert = 'Session var is ' + @Session_CompanyCode</Script>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-07-13T14:16:34">
+    <controller name="IsaDetailPls" />
+    <rule id="r100" />
+    <update>
+      <Script>set @Session_CompanyCode = 'PLS'
+set @Result_ShowAlert = 'Session var is ' + @Session_CompanyCode</Script>
+      <Phase>Execute</Phase>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-07-13T14:23:31">
+    <controller name="Isa" />
+    <insert type="rule">
+      <Type>Sql</Type>
+      <CommandName>Select</CommandName>
+      <CommandArgument>IsaDetailPbs</CommandArgument>
+      <Phase>Execute</Phase>
+      <Script>set @Result_ShowAlert = 'PBS'</Script>
+    </insert>
+  </c>
+  <c y="NodeSet" t="2017-07-13T14:24:40">
+    <controller name="Isa" />
+    <rule id="r102" />
+    <delete />
+  </c>
+  <c y="NodeSet" t="2017-07-13T14:25:04">
+    <controller name="IsaDetailPbs" />
+    <rule id="r100" />
+    <update>
+      <Phase>Execute</Phase>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-07-13T14:25:15">
+    <controller name="IsaDetailPss" />
+    <rule id="r100" />
+    <update>
+      <Phase>Execute</Phase>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-07-13T14:26:39">
+    <controller name="IsaDetailPls" />
+    <insert type="rule">
+      <Type>Sql</Type>
+      <CommandName>Select</CommandName>
+      <Phase>Execute</Phase>
+      <Script>set @Result_ShowAlert = 'PLS'</Script>
+    </insert>
+  </c>
+  <c y="NodeSet" t="2017-07-13T14:27:51">
+    <controller name="IsaDetailPls" />
+    <rule id="r101" />
+    <update>
+      <Script>set @Session_CompanyCode = 'PLS'</Script>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-07-13T14:27:58">
+    <controller name="IsaDetailPbs" />
+    <copy>
+      <controller name="IsaDetailPls" />
+      <rule id="r101" />
+    </copy>
+  </c>
+  <c y="NodeSet" t="2017-07-13T14:28:00">
+    <controller name="IsaDetailPss" />
+    <copy>
+      <controller name="IsaDetailPls" />
+      <rule id="r101" />
+    </copy>
+  </c>
+  <c y="NodeSet" t="2017-07-13T14:28:15">
+    <controller name="IsaDetailPbs" />
+    <rule id="r101" />
+    <update>
+      <Script>set @Session_CompanyCode = 'PBS'</Script>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-07-13T14:28:28">
+    <controller name="IsaDetailPss" />
+    <rule id="r101" />
+    <update>
+      <Script>set @Session_CompanyCode = 'PSS'</Script>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-07-13T14:30:17">
+    <controller name="IsaDetailPbs" />
+    <rule id="r100" />
+    <delete />
+  </c>
+  <c y="NodeSet" t="2017-07-13T14:30:24">
+    <controller name="IsaDetailPls" />
+    <rule id="r100" />
+    <delete />
+  </c>
+  <c y="NodeSet" t="2017-07-13T14:30:29">
+    <controller name="IsaDetailPss" />
+    <rule id="r100" />
+    <delete />
+  </c>
+  <c y="NodeSet" t="2017-07-13T14:31:24">
+    <controller name="Isa" />
+    <rule id="r101" />
+    <update>
+      <Script>set @Session_CompanyCode = @CompanyCode</Script>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-07-13T15:00:56">
+    <controller name="Isa" />
+    <actionGroup id="ag1" />
+    <action id="a2" />
+    <before>
+      <controller name="Isa" />
+      <actionGroup id="ag1" />
+      <action id="a1" />
+    </before>
+  </c>
+  <c y="NodeSet" t="2017-07-13T15:05:07">
+    <controller name="Isa" />
+    <rule id="r101" />
+    <update>
+      <Script>set @Session_CompanyCode = 'PLS'</Script>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-07-13T15:06:29">
+    <controller name="Isa" />
+    <rule id="r101" />
+    <update>
+      <Script>set @Session_CompanyCode = @CompanyCode</Script>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-07-13T15:08:23">
+    <controller name="IsaDetailPls" />
+    <field name="IsaCompanyCode" />
+    <update>
+      <ContextFields />
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-07-13T15:08:33">
+    <controller name="IsaDetailPbs" />
+    <field name="IsaCompanyCode" />
+    <update>
+      <ContextFields />
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-07-13T15:08:48">
+    <controller name="IsaDetailPss" />
+    <field name="IsaCompanyCode" />
+    <update>
+      <ContextFields />
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-07-14T09:52:34">
+    <controller name="IsaItemMaster" />
+    <view id="grid1" />
+    <update>
+      <FilterExpression />
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-07-14T09:53:47">
+    <controller name="IsaItemMaster" />
+    <view id="grid1" />
+    <update>
+      <FilterExpression>IsaCategoryMasterCompanyCode = @Session_CompanyCode</FilterExpression>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-07-14T09:58:01">
+    <controller name="IsaDetailPls" />
+    <rule id="r101" />
+    <delete />
+  </c>
+  <c y="NodeSet" t="2017-07-14T10:08:03">
+    <controller name="Isa" />
+    <rule id="r101" />
+    <update>
+      <Script>set @Session_CompanyCode = 'PLS'</Script>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-07-14T10:09:30">
+    <controller name="Isa" />
+    <rule id="r101" />
+    <update>
+      <Script>set @Session_CompanyCode = @CompanyCode</Script>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-07-14T10:09:51">
+    <controller name="IsaDetailPbs" />
+    <rule id="r101" />
+    <update>
+      <Script>set @Session_CompanyCode = 'PLS'</Script>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-07-14T10:11:07">
+    <controller name="IsaDetailPbs" />
+    <rule id="r101" />
+    <update>
+      <Script>set @Session_CompanyCode = 'PBS'</Script>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-07-14T10:12:59">
+    <controller name="IsaDetailPls" />
+    <field name="IsaItemMasterID" />
+    <update>
+      <ContextFields />
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-07-14T10:18:01">
+    <controller name="IsaDetailPls" />
+    <copy>
+      <controller name="IsaDetailPbs" />
+      <rule id="r101" />
+    </copy>
+  </c>
+  <c y="NodeSet" t="2017-07-14T10:18:09">
+    <controller name="IsaDetailPls" />
+    <rule id="r101" />
+    <update>
+      <Script>set @Session_CompanyCode = 'PLS'</Script>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-07-14T10:18:19">
+    <controller name="IsaDetailPss" />
+    <field name="IsaItemMasterID" />
+    <update>
+      <ContextFields />
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-07-14T10:41:55">
+    <controller name="IsaDetailPbs" />
+    <insert type="field">
+      <Name>PBSCopanyCode</Name>
+      <Type>String</Type>
+      <AllowNulls>true</AllowNulls>
+      <IsPrimaryKey>false</IsPrimaryKey>
+      <IsVirtual>false</IsVirtual>
+      <Computed>false</Computed>
+      <Calculated>false</Calculated>
+      <CausesCalculate>false</CausesCalculate>
+      <OnDemand>false</OnDemand>
+      <Label>PBSCopany Code</Label>
+      <ReadOnly>false</ReadOnly>
+      <ShowInSummary>false</ShowInSummary>
+      <HtmlEncode>true</HtmlEncode>
+      <FormatOnClient>true</FormatOnClient>
+      <SearchOnStart>false</SearchOnStart>
+      <AutoSelect>false</AutoSelect>
+      <ItemsLetters>false</ItemsLetters>
+      <ContextFields>'PBS'</ContextFields>
+      <AllowQBE>true</AllowQBE>
+      <AllowSorting>true</AllowSorting>
+      <MaskType>None</MaskType>
+      <AllowLEV>false</AllowLEV>
+    </insert>
+  </c>
+  <c y="NodeSet" t="2017-07-14T10:42:07">
+    <controller name="IsaDetailPbs" />
+    <view id="grid1" />
+    <move>
+      <controller name="IsaDetailPbs" />
+      <field name="PBSCopanyCode" />
+    </move>
+  </c>
+  <c y="NodeSet" t="2017-07-14T10:42:54">
+    <controller name="IsaDetailPbs" />
+    <field name="PBSCopanyCode" />
+    <configure type="SqlConverter" />
+  </c>
+  <c y="NodeSet" t="2017-07-14T10:43:33">
+    <controller name="IsaDetailPbs" />
+    <rule id="r100" />
+    <update>
+      <Script>if @PBSCopanyCode is not null and 
+    (@Arguments_CommandName &lt;&gt; 'Calculate' or @Arguments_Trigger = 'PBSCopanyCode')
+begin
+   set @Session_CompanyCode = 'PBS'  
+end
+</Script>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-07-14T10:45:44">
+    <controller name="IsaDetailPbs" />
+    <field name="PBSCopanyCode" />
+    <update>
+      <Default>'PBS'</Default>
+      <CodeDefault>'PBS'</CodeDefault>
+      <CodeValue>'PBS'</CodeValue>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-07-14T10:46:39">
+    <controller name="IsaDetailPbs" />
+    <field name="PBSCopanyCode" />
+    <update>
+      <Default>"PBS"</Default>
+      <CodeDefault>"PBS"</CodeDefault>
+      <CodeValue>"PBS"</CodeValue>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-07-14T10:48:07">
+    <controller name="IsaDetailPbs" />
+    <field name="PBSCopanyCode" />
+    <update>
+      <Default />
+      <CodeValue />
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-07-14T10:49:17">
+    <controller name="IsaDetailPbs" />
+    <field name="PBSCopanyCode" />
+    <update>
+      <Default>"PBS"</Default>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-07-14T10:50:36">
+    <controller name="IsaDetailPbs" />
+    <field name="PBSCopanyCode" />
+    <delete />
+  </c>
+  <c y="NodeSet" t="2017-07-14T10:50:40">
+    <controller name="IsaDetailPbs" />
+    <rule id="r100" />
+    <delete />
+  </c>
+  <c y="NodeSet" t="2017-07-14T10:52:27">
+    <controller name="IsaDetailPbs" />
+    <insert type="rule">
+      <Type>Sql</Type>
+      <CommandName>Insert|Update|Delete</CommandName>
+      <Phase>Before</Phase>
+      <Script>set @Session_CompanyCode = 'PBS'</Script>
+    </insert>
+  </c>
+  <c y="NodeSet" t="2017-07-14T10:54:14">
+    <controller name="IsaDetailPbs" />
+    <rule id="r100" />
+    <update>
+      <Script>set @Session_CompanyCode = 'PBS'
+set @Result_ShowAlert = 'insert'</Script>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-07-14T10:54:30">
+    <controller name="IsaDetailPbs" />
+    <rule id="r101" />
+    <update>
+      <Script>set @Session_CompanyCode = 'PBS'
+set @Result_ShowAlert = 'select'</Script>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-07-14T10:54:36">
+    <controller name="IsaDetailPbs" />
+    <rule id="r101" />
+    <update>
+      <Script>set @Session_CompanyCode = 'PBS'
+set @Result_ShowAlert = 'select'</Script>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-07-14T10:56:12">
+    <controller name="IsaDetailPbs" />
+    <rule id="r100" />
+    <update>
+      <Script>set @Session_CompanyCode = 'PBS'
+set @Result_ShowAlert = 'insert'</Script>
+      <Phase>Execute</Phase>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-07-14T10:57:30">
+    <controller name="IsaDetailPbs" />
+    <rule id="r100" />
+    <update>
+      <CommandName>New</CommandName>
+      <Script>set @Session_CompanyCode = 'PBS'
+set @Result_ShowAlert = 'insert'</Script>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-07-14T10:57:36">
+    <controller name="IsaDetailPbs" />
+    <rule id="r100" />
+    <update>
+      <Script>set @Session_CompanyCode = 'PBS'
+set @Result_ShowAlert = 'New'</Script>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-07-14T10:58:57">
+    <controller name="IsaDetailPls" />
+    <copy>
+      <controller name="IsaDetailPbs" />
+      <rule id="r100" />
+    </copy>
+  </c>
+  <c y="NodeSet" t="2017-07-14T10:59:03">
+    <controller name="IsaDetailPls" />
+    <rule id="r100" />
+    <update>
+      <Script>set @Session_CompanyCode = 'PLS'
+set @Result_ShowAlert = 'New'</Script>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-07-14T11:00:12">
+    <controller name="IsaDetailPls" />
+    <rule id="r100" />
+    <update>
+      <Script>set @Session_CompanyCode = 'PLS'</Script>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-07-14T11:00:20">
+    <controller name="IsaDetailPss" />
+    <copy>
+      <controller name="IsaDetailPls" />
+      <rule id="r100" />
+    </copy>
+  </c>
+  <c y="NodeSet" t="2017-07-14T11:00:27">
+    <controller name="IsaDetailPss" />
+    <rule id="r100" />
+    <update>
+      <Script>set @Session_CompanyCode = 'PSS'</Script>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-07-14T11:00:35">
+    <controller name="IsaDetailPbs" />
+    <rule id="r100" />
+    <update>
+      <Script>set @Session_CompanyCode = 'PBS'</Script>
+    </update>
+  </c>
+  <c y="NodeSet" t="2017-07-14T11:00:42">
+    <controller name="IsaDetailPbs" />
+    <rule id="r101" />
+    <update>
+      <Script>set @Session_CompanyCode = 'PBS'</Script>
+    </update>
+  </c>
+</log>

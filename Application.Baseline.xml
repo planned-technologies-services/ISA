@@ -1,0 +1,216 @@
+<application snapshot="false" xmlns="urn:schemas-codeontime-com:data-aquarium-application" xmlns:m="urn:codeontime:data-map" xmlns:dm="urn:schemas-codeontime-com:data-model">
+  <pages xmlns="urn:schemas-codeontime-com:data-aquarium-application">
+    <page name="Home" title="^HomeTitle^Start^HomeTitle^" description="^HomeDesc^Application home page^HomeDesc^" path="^HomePath^Home^HomePath^" style="HomePage" customStyle="Wide" index="1000">
+      <containers>
+        <container id="container1" flow="NewRow" />
+        <container id="container2" flow="NewColumn" />
+      </containers>
+      <controls>
+        <control id="control1" name="TableOfContents" container="container1" />
+        <control id="control2" name="Welcome" container="container2" />
+      </controls>
+    </page>
+    <page name="Isa" title="Isa" description="View Isa" index="1010" path="Isa">
+      <containers>
+        <container id="container1" flow="NewRow" />
+      </containers>
+      <dataViews>
+        <dataView id="view1" controller="Isa" view="grid1" showInSummary="true" container="container1" activator="None" text="" />
+      </dataViews>
+      <controls />
+      <about>This page allows isa management.</about>
+    </page>
+    <page name="IsaSite" title="Isa Site" description="View Isa Site" index="1020" path="Isa Site">
+      <containers>
+        <container id="container1" flow="NewRow" />
+      </containers>
+      <dataViews>
+        <dataView id="view1" controller="IsaSite" view="grid1" showInSummary="true" container="container1" activator="None" text="" />
+      </dataViews>
+      <controls />
+      <about>This page allows isa site management.</about>
+    </page>
+    <page name="IsaPropertyMgmt" title="Isa Property Mgmt" description="View Isa Property Mgmt" index="1030" path="Isa Property Mgmt">
+      <containers>
+        <container id="container1" flow="NewRow" />
+      </containers>
+      <dataViews>
+        <dataView id="view1" controller="IsaPropertyMgmt" view="grid1" showInSummary="true" container="container1" activator="None" text="" />
+      </dataViews>
+      <controls />
+      <about>This page allows isa property mgmt management.</about>
+    </page>
+    <page name="IsaCompetitorMaster" title="Isa Competitor Master" description="View Isa Competitor Master" index="1040" path="Isa Competitor Master">
+      <containers>
+        <container id="container1" flow="NewRow" />
+      </containers>
+      <dataViews>
+        <dataView id="view1" controller="IsaCompetitorMaster" view="grid1" showInSummary="true" container="container1" activator="None" text="" />
+      </dataViews>
+      <controls />
+      <about>This page allows isa competitor master management.</about>
+    </page>
+    <page name="IsaDetail" title="Isa Detail" description="View Isa Detail" index="1050" path="Isa Detail">
+      <containers>
+        <container id="container1" flow="NewRow" />
+      </containers>
+      <dataViews>
+        <dataView id="view1" controller="IsaDetail" view="grid1" showInSummary="true" container="container1" activator="None" text="" showModalForms="true" />
+      </dataViews>
+      <controls />
+      <about>This page allows isa detail management.</about>
+    </page>
+    <page name="IsaCategoryMaster" title="Isa Category Master" description="View Isa Category Master" index="1060" path="Isa Category Master">
+      <containers>
+        <container id="container1" flow="NewRow" />
+      </containers>
+      <dataViews>
+        <dataView id="view1" controller="IsaCategoryMaster" view="grid1" showInSummary="true" container="container1" activator="None" text="" />
+      </dataViews>
+      <controls />
+      <about>This page allows isa category master management.</about>
+    </page>
+    <page name="IsaItemMaster" title="Isa Item Master" description="View Isa Item Master" index="1070" path="Isa Item Master">
+      <containers>
+        <container id="container1" flow="NewRow" />
+      </containers>
+      <dataViews>
+        <dataView id="view1" controller="IsaItemMaster" view="grid1" showInSummary="true" container="container1" activator="None" text="" />
+      </dataViews>
+      <controls />
+      <about>This page allows isa item master management.</about>
+    </page>
+    <page name="IsaAttachment" title="Isa Attachment" description="View Isa Attachment" index="1080" path="Isa Attachment">
+      <containers>
+        <container id="container1" flow="NewRow" />
+      </containers>
+      <dataViews>
+        <dataView id="view1" controller="IsaAttachment" view="grid1" showInSummary="true" container="container1" activator="None" text="" showModalForms="true" />
+      </dataViews>
+      <controls />
+      <about>This page allows isa attachment management.</about>
+    </page>
+    <page name="IsaContact" title="Isa Contact" description="View Isa Contact" index="1090" path="Isa Contact">
+      <containers>
+        <container id="container1" flow="NewRow" />
+      </containers>
+      <dataViews>
+        <dataView id="view1" controller="IsaContact" view="grid1" showInSummary="true" container="container1" activator="None" text="" showModalForms="true" />
+      </dataViews>
+      <controls />
+      <about>This page allows isa contact management.</about>
+    </page>
+    <page name="IsaContactMaster" title="Isa Contact Master" description="View Isa Contact Master" index="1100" path="Isa Contact Master">
+      <containers>
+        <container id="container1" flow="NewRow" />
+      </containers>
+      <dataViews>
+        <dataView id="view1" controller="IsaContactMaster" view="grid1" showInSummary="true" container="container1" activator="None" text="" />
+      </dataViews>
+      <controls />
+      <about>This page allows isa contact master management.</about>
+    </page>
+    <page name="IsaContactType" title="Isa Contact Type" description="View Isa Contact Type" index="1110" path="Isa Contact Type">
+      <containers>
+        <container id="container1" flow="NewRow" />
+      </containers>
+      <dataViews>
+        <dataView id="view1" controller="IsaContactType" view="grid1" showInSummary="true" container="container1" activator="None" text="" />
+      </dataViews>
+      <controls />
+      <about>This page allows isa contact type management.</about>
+    </page>
+    <page name="IsaTemplate" title="Isa Template" description="View Isa Template" index="1120" path="Isa Template" xmlns="urn:schemas-codeontime-com:data-aquarium-application">
+      <containers>
+        <container id="container1" flow="NewRow" />
+      </containers>
+      <dataViews>
+        <dataView id="view1" controller="IsaTemplate" view="grid1" showInSummary="true" container="container1" activator="None" text="" showModalForms="true" />
+      </dataViews>
+      <controls />
+      <about>This page allows isa template management.</about>
+    </page>
+    <page name="IsaDetailPbs" title="Isa Detail Pbs" description="View Isa Detail Pbs" index="1130" path="Isa Detail Pbs" xmlns="urn:schemas-codeontime-com:data-aquarium-application">
+      <containers>
+        <container id="container1" flow="NewRow" />
+      </containers>
+      <dataViews>
+        <dataView id="view1" controller="IsaDetailPbs" view="grid1" showInSummary="true" container="container1" activator="None" text="" showModalForms="true" />
+      </dataViews>
+      <controls />
+      <about>This page allows isa detail pbs management.</about>
+    </page>
+    <page name="IsaDetailPls" title="Isa Detail Pls" description="View Isa Detail Pls" index="1140" path="Isa Detail Pls" xmlns="urn:schemas-codeontime-com:data-aquarium-application">
+      <containers>
+        <container id="container1" flow="NewRow" />
+      </containers>
+      <dataViews>
+        <dataView id="view1" controller="IsaDetailPls" view="grid1" showInSummary="true" container="container1" activator="None" text="" showModalForms="true" />
+      </dataViews>
+      <controls />
+      <about>This page allows isa detail pls management.</about>
+    </page>
+    <page name="IsaDetailPss" title="Isa Detail Pss" description="View Isa Detail Pss" index="1150" path="Isa Detail Pss" xmlns="urn:schemas-codeontime-com:data-aquarium-application">
+      <containers>
+        <container id="container1" flow="NewRow" />
+      </containers>
+      <dataViews>
+        <dataView id="view1" controller="IsaDetailPss" view="grid1" showInSummary="true" container="container1" activator="None" text="" showModalForms="true" />
+      </dataViews>
+      <controls />
+      <about>This page allows isa detail pss management.</about>
+    </page>
+  </pages>
+  <userControls>
+    <userControl name="TableOfContents" prefix="uc" generate="Always">
+      <body>
+                
+&lt;!doctype html&gt;
+&lt;html&gt;
+&lt;body&gt;
+    &lt;div class="ParaInfo"&gt;
+        ^TocInstruction^Please select a page link in the table of contents below.^TocInstruction^
+    &lt;/div&gt;
+    &lt;div class="ParaHeader"&gt;
+        ^TocHeader^Site Map^TocHeader^
+    &lt;/div&gt;
+    &lt;div data-role="placeholder" data-placeholder="site-map"&gt;&lt;/div&gt;
+
+    &lt;div id="app-sitemap" data-app-role="page" data-activator="Button|^TocHeader^Site Map^TocHeader^"&gt;
+        &lt;p&gt;
+            &lt;span&gt;^TocInstruction^Please select a page link in the table of contents below.^TocInstruction^&lt;/span&gt;
+        &lt;/p&gt;
+        &lt;div data-app-role="sitemap"&gt;&lt;/div&gt;
+        &lt;p&gt;
+            &lt;br /&gt;
+        &lt;/p&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+              </body>
+    </userControl>
+    <userControl name="Welcome" prefix="uc" generate="Always">
+      <body>
+                  
+&lt;!doctype html&gt;
+&lt;html&gt;
+&lt;body&gt;
+
+                
+&lt;div style="padding-left:8px"&gt;&lt;div class="ParaInfo"&gt;
+        Select a page in a table of content.&lt;/div&gt;
+&lt;div class="ParaHeader"&gt;
+    Instructions
+&lt;/div&gt;
+&lt;div class="ParaText"&gt;
+    Membership option has not been selected for this application. 
+    The entire site content can be accessed without any restrictions.
+&lt;/div&gt;
+
+                  
+&lt;/body&gt;
+&lt;/html&gt;
+                </body>
+    </userControl>
+  </userControls>
+</application>

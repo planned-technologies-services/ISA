@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0">
+  <siteMapNode title="^SiteHome^Home^SiteHome^" description="" url="~/index.html">
+    <siteMapNode title="^HomePath^Home^HomePath^" description="^HomeDesc^Application home page^HomeDesc^" url="~/pages/home" cssClass="Wide" />
+    <siteMapNode title="ISA" description="View Isa" url="~/pages/isa" />
+    <siteMapNode title="Sites" description="View Isa Site" url="~/pages/isa-site" />
+    <siteMapNode title="Contacts" description="View Isa Contact" url="~/pages/isa-contact" />
+    <siteMapNode title="Maintenance" description="" url="~/pages/maintenance" roles="*">
+      <siteMapNode title="Template" description="View Isa Template" url="~/pages/isa-template" />
+      <siteMapNode title="Contact Master" description="View Isa Contact Master" url="~/pages/isa-contact-master" />
+      <siteMapNode title="Contact Types" description="View Isa Contact Type" url="~/pages/isa-contact-type" />
+      <siteMapNode title="Categories" description="View Isa Category Master" url="~/pages/isa-category-master" />
+      <siteMapNode title="Competitors" description="View Isa Competitor Master" url="~/pages/isa-competitor-master" />
+      <siteMapNode title="Property Mgmt" description="View Isa Property Mgmt" url="~/pages/isa-property-mgmt" />
+      <siteMapNode title="Items" description="View Isa Item Master" url="~/pages/isa-item-master" />
+      <siteMapNode title="Isa Detail Pss" description="View Isa Detail Pss" url="~/pages/isa-detail-pss" />
+      <siteMapNode title="Isa Detail Pbs" description="View Isa Detail Pbs" url="~/pages/isa-detail-pbs" />
+      <siteMapNode title="Isa Detail Pls" description="View Isa Detail Pls" url="~/pages/isa-detail-pls" />
+      <siteMapNode title="Attachments" description="View Isa Attachment" url="~/pages/isa-attachment" />
+    </siteMapNode>
+  </siteMapNode>
+</siteMap>

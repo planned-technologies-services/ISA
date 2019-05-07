@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dataModel baseSchema="dbo" baseTable="isaContactMaster" alias="isaContactMaster" created="2017-06-27T16:13:36" modified="2017-06-27T16:13:43" x="20" y="20" xmlns="urn:schemas-codeontime-com:data-model">
+  <foreignKeys>
+    <foreignKey id="ContactType" parentTableSchema="dbo" parentTableName="isaContactType" x="306" y="20">
+      <foreignKeyColumn columnName="ContactTypeID" parentColumnName="isaContactTypeID" />
+    </foreignKey>
+  </foreignKeys>
+  <columns>
+    <column name="isaContactID" fieldName="IsaContactID" label="isa Contact ID" />
+    <column name="ContactTypeID" fieldName="ContactTypeID" label="Contact Type ID" aliasColumnName="ContactDescription" aliasForeignKey="ContactType" />
+    <column name="ContactDescription" fieldName="ContactTypeContactDescription" label="Contact Type Contact Description" foreignKey="ContactType" />
+    <column name="FirstName" fieldName="FirstName" label="First Name" />
+    <column name="LastName" fieldName="LastName" label="Last Name" />
+    <column name="Email" fieldName="Email" label="Email" />
+    <column name="PhoneNumber" fieldName="PhoneNumber" label="Phone Number" />
+    <column name="Title" fieldName="Title" label="Title" />
+  </columns>
+</dataModel>
